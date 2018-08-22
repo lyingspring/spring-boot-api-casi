@@ -1,0 +1,404 @@
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+phoneNumber=13588773989&msg=你手机喀喀喀33s1借记卡
+
+<> 2018-08-22T111927.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce?phoneNumber=13588773989&msg=积极健康
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+<> 2018-08-22T111632.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce?phoneNumber=13588773989&msg=积极健康
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-22T111024.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce?sfz=33018319930708176X&value=330127198306231927&phoneNumber=15958002639&msg=www
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-22T110925.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce?sfz=33018319930708176X&value=330127198306231927&phoneNumber=15958002639&msg=杭州金品商铺要不要
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-22T110834.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/sendSmsbyOnce?sfz=33018319930708176X&value=330127198306231927&phoneNumber=15958002639&msg=杭州金品商铺要不要？
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-22T110733.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=33018319930708176X&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-22T110539.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T093629.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T082452.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T082418.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T081922.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T080953.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T080732.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T080254.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getInsuranceProof?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T080131.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/getcbzm?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T074752.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T063049.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T063037.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=341221200001138094&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062809.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=330127197411046825&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062455.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=330283198602180016&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062409.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=330281198208034624&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062348.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=622425199504202317&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062238.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/queryGA?sfz=510704198011220018&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T062217.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T061911.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T061638.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T061552.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T061231.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T060411.200.json
+
+###
+
+POST http://172.16.21.222:8964/casiapi/test1?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-21T060346.200.json
+
+###
+
+POST http://172.16.21.222:8964/ac01/findBy?fieldName=aae135&value=330127198306231927
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-15T010854.200.json
+
+###
+
+POST http://172.16.21.222:8964/ac01/findBy?fieldName=aae135&value=330127198706050922
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-15T010832.200.json
+
+###
+
+POST http://172.16.21.222:8964/ac01/findBy?fieldName=aae135&value=330127198706050922
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-15T010814.200.json
+
+###
+
+POST http://172.16.21.222:8964/ac01/findBy?fieldName=aae135&value=330127198706050922
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-15T010737-1.200.json
+
+###
+
+POST http://172.16.21.222:8964/ac01/findBy?fieldName=aae135&value=330127198706050922
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-15T010737.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T085753.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T082013.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T082011.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T081923.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T081355.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T081354.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T080717.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T071014.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T071012.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T070751.200.json
+
+###
+
+GET http://127.0.0.1:8964/h5/1001.jsonp?callback=aaa&jsonp=aaa&callback=myfun
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T070737.200.json
+
+###
+
+GET http://localhost:8964/hnsiapi/testJsonp?callback=aaa&jsonp=aaa
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T055409.200.json
+
+###
+
+GET http://localhost:8964/hnsiapi/testJsonp?callback=aaa&jsonp=aaa
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T054640.200.json
+
+###
+
+GET http://localhost:8964/hnsiapi/testJsonp?callback=aaa&jsonp=aaa
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-14T054639.200.json
+
+###
+
