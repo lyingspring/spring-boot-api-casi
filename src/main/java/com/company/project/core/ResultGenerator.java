@@ -24,4 +24,11 @@ public class ResultGenerator {
                 .setCode(ResultCode.FAIL)
                 .setMessage(message);
     }
+
+    public static DataShaingResult genDSuccessResult(Object data) {
+        return new DataShaingResult()
+                .setResult_code(ResultCode.SUCCESS)
+                .setMsg(DEFAULT_SUCCESS_MESSAGE)
+                .setData(data);
+    }
 }

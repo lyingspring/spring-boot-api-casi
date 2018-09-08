@@ -5,7 +5,11 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+/**
+ * 数据共享数据库查询方法
+ */
 public interface DataSharingMapper {
     /**
      * 是否有双低
@@ -50,4 +54,14 @@ public interface DataSharingMapper {
             " and ekb028+ekb029<ekb030+ekb031")
     public List<HashMap> checkinfoybqf(Long aac001) ;
 
+    /**
+     * 通用查询
+     *注意：结果字段不能为空 如果为空 空字段不加入到HashMap中
+     * Map<String,String> map1=new HashMap<>();
+     *         map1.put("SQL","select aac003,aae135 from ac01 where aac001="+aac001);
+     *         List aa=dataSharingMapper.commQuery(map1);
+     *         System.out.println(aa.get(0));
+     */
+    @Select("${SQL}")
+    public List<HashMap<String,Object>> commQuery(Map<String,String> map) ;
 }

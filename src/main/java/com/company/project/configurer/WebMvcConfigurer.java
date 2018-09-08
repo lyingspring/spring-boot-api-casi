@@ -15,6 +15,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
 
+import com.company.project.core.DataShaingResult;
 import com.company.project.core.Result;
 import com.company.project.core.ResultCode;
 import com.company.project.core.ServiceException;
@@ -86,7 +87,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
                     }
                     logger.error(message, e);
                 }
-                responseResult(response, result);
+                responseResult(response, new DataShaingResult(result));
                 return new ModelAndView();
             }
 
@@ -126,6 +127,16 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     }
 
     private void responseResult(HttpServletResponse response, Result result) {
+        response.setCharacterEncoding("UTF-8");
+        response.setHeader("Content-type", "application/json;charset=UTF-8");
+        response.setStatus(200);
+        try {
+            response.getWriter().write(JSON.toJSONString(result));
+        } catch (IOException ex) {
+            logger.error(ex.getMessage());
+        }
+    }
+    private void responseResult(HttpServletResponse response, DataShaingResult result) {
         response.setCharacterEncoding("UTF-8");
         response.setHeader("Content-type", "application/json;charset=UTF-8");
         response.setStatus(200);

@@ -1,6 +1,8 @@
 package com.company.project.service;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.company.project.configurer.InsiisActionConfig;
 import com.company.project.core.ServiceException;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
@@ -12,41 +14,90 @@ import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.commons.httpclient.params.HttpMethodParams;
 
 import java.io.*;
 import java.util.Date;
 import java.util.HashMap;
 
+/**
+ * 模拟登陆社保系统并发起请求
+ * author maoxj
+ */
 public class LoginInsiis {
-    private static String filePath="d://springBoot_tmp/yzm.png";
-    private static String cashcookie="";
-   /**
-            * 测试类
+    private static String filePath = "d://springBoot_tmp/yzm.png";
+    private static String cashcookie = "";
+    private static String insiisUrl = "http://10.255.5.11:8080/insiis";//系统登陆地址
+    private static String host = "10.255.5.11:8080";
+    private static String loginName = "xxk";//登陆用户名
+    private static String passwordMD5 = "e1dedb80775489a50158c94b36af96bb";//MD5加密后的密码
+
+    /**
+     * @param args
+     * @throws Exception
      */
 
     public static void main(String[] args) throws Exception {
-        String cookis=getImage(filePath);
+        String cookis = getImage(filePath);
         String code = getImgContent(filePath);
-        int bb= logonAction(code,cookis);
-        System.out.println("验证码 = " + code+" "+bb);
+        int bb = logonAction(code, cookis);
+        System.out.println("验证码 = " + code + " " + bb);
 
     }
+
+    /**
+     * 调用统一入口
+     *
+     * @param TradeCode    接口代码
+     * @param aac001       人员ID
+     * @param aab001       单位编码 可空 记入操作日志用
+     * @param digest       操作日志摘要
+     * @param TradeCodeMap 交易参数
+     * @return
+     */
+    public static JSONObject returnInsiisPost(String TradeCode, Long aac001, String aab001, String digest,
+                                              HashMap<String, Object> TradeCodeMap) throws IOException {
+        String url = "";
+        String functionid = "";
+        try {
+            url = insiisUrl + InsiisActionConfig.configMap.get(TradeCode).toString();//方法URL
+            functionid = InsiisActionConfig.configMap.get("functionid" + TradeCode).toString();//模块的functionid
+            if (url.equals(insiisUrl)||url.isEmpty()) {
+                throw new ServiceException("读取InsiisActionConfig出错,url为空:" + TradeCode);
+            }
+        } catch (Exception e) {
+            throw new ServiceException("读取InsiisActionConfig出错:" + TradeCode);
+        }
+        String input= JSON.toJSONString(TradeCodeMap) ;
+        JSONObject json = new JSONObject();
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map = TradeCodeMap;
+        map.put("userlog", "{\"functionid\":\"" + functionid + "\",\"aac001\":" + aac001 + ",\"aab001\":" + aab001 + ",\"digest\":" +
+                "\"" + digest + "\",\"prcol1\":\"\",\"prcol2\":\"\",\"prcol3\":\"\"," +
+                "\"prcol4\":\"\",\"prcol5\":\"\",\"prcol6\":\"\",\"prcol7\":\"\",\"prcol8\":\"\",\"orisource\":\"此条记录由外网系统调用接口操作:"+input+"\"}");
+
+        json = InsiisPost(url, map);
+
+        return json;
+    }
+
     /**
      * 获取登陆成功后的Cookie
+     *
      * @return
      * @throws IOException
      */
-    public static int  retrunLoginCookies() throws IOException {
+    public static int retrunLoginCookies() throws IOException {
 
-        String cookis=getImage(filePath);
+        String cookis = getImage(filePath);
         String code = getImgContent(filePath);
 
         System.out.println("验证码 = " + code);
-        int bb= logonAction(code,cookis);
-        if(bb==200){
-            cashcookie=cookis;
+        int bb = logonAction(code, cookis);
+        if (bb == 200) {
+            cashcookie = cookis;
             return bb;
-        }else{
+        } else {
             return bb;
         }
 
@@ -54,28 +105,31 @@ public class LoginInsiis {
 
     /**
      * 获取验证码图片保存本地并返回Cookie
+     *
      * @param filePath
      * @return
      */
-    protected static String getImage(String filePath){
+    protected static String getImage(String filePath) {
         //初始化httpclient
         HttpClient httpClient = new HttpClient();
         //首先把进入淳安一体化的首页得到cookie（里面会包括token和sessionid等）；
-        String url1 = "http://10.255.5.11:8080/insiis";
+        String url1 = insiisUrl;
         GetMethod getMethod1 = new GetMethod(url1);
         httpClient.getParams().setCookiePolicy(CookiePolicy.BROWSER_COMPATIBILITY);
         try {
             //执行访问页面
-            int statusCode=httpClient.executeMethod(getMethod1);
+            int statusCode = httpClient.executeMethod(getMethod1);
             System.out.println("首页 = " + statusCode);
         } catch (HttpException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("访问社保首页出错1！");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("访问社保首页出错2！");
         }
-        // 获得登陆后的 Cookie
+        // 获得社保系统的 Cookie
         Cookie[] cookies = httpClient.getState().getCookies();
         StringBuffer tmpcookies = new StringBuffer();
         for (Cookie c : cookies) {
@@ -83,17 +137,19 @@ public class LoginInsiis {
         }
 
         //给路径加后缀，避免相同路径被缓存不再请求
-        String url2 = "http://10.255.5.11:8080/insiis/verifyCode?t="+new Date().getTime();
+        String url2 = insiisUrl + "/verifyCode?t=" + new Date().getTime();
         GetMethod getMethod2 = new GetMethod(url2);
-        getMethod2.setRequestHeader("Cookie",tmpcookies.toString());
+        getMethod2.setRequestHeader("Cookie", tmpcookies.toString());
         try {
-            int statusCode2=httpClient.executeMethod(getMethod2);
+            int statusCode2 = httpClient.executeMethod(getMethod2);
         } catch (HttpException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("获取验证码图片出错1！");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("获取验证码图片出错2！");
         }
         //获取请求到的数据
         byte[] responseBody = null;
@@ -102,6 +158,7 @@ public class LoginInsiis {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("获取验证码出错1！");
         }
         //将请求的验证码图片用输出流方式输出
         try {
@@ -112,6 +169,7 @@ public class LoginInsiis {
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
+            throw new ServiceException("获取验证码写入本地出错2！");
         }
 
         return tmpcookies.toString();
@@ -120,6 +178,7 @@ public class LoginInsiis {
 
     /**
      * 验证码图片识别
+     *
      * @param imgUrl
      * @return
      */
@@ -140,19 +199,28 @@ public class LoginInsiis {
             System.out.println(content);
         } catch (TesseractException e) {
             System.err.println(e.getMessage());
+            throw new ServiceException("识别验证码出错2！");
         }
-        content=content.replace(":","3").replace("S","5")
-                .replace("E","8").replace("s","6")
-                .replace("o","0").replace("]","1");
+        content = content.replace(":", "3").replace("S", "5")
+                .replace("E", "8").replace("s", "6")
+                .replace("o", "0").replace("]", "1");
         return content;
     }
 
-    protected static int logonAction(String verifyCode,String cookies) throws IOException {
+    /**
+     * 进行模拟系统登陆操作
+     *
+     * @param verifyCode
+     * @param cookies
+     * @return
+     * @throws IOException
+     */
+    protected static int logonAction(String verifyCode, String cookies) throws IOException {
         HttpClient httpClient = new HttpClient();
-        String posturl = "http://10.255.5.11:8080/insiis/logonAction.do";
+        String posturl = insiisUrl + "/logonAction.do";
         PostMethod postMethod = new PostMethod(posturl);
         //获取提取验证码时得到的cookie；
-        postMethod.setRequestHeader("Cookie", cookies.replace(";",""));
+        postMethod.setRequestHeader("Cookie", cookies.replace(";", ""));
         // referer指当前页面从哪里来的，页面为了限制机器操作的方法一般为cookie,referer和验证码；
         //设置一些header
         postMethod.setRequestHeader("Accept", "image/gif, image/jpeg, image/pjpeg, application/x-ms-application, application/xaml+xml, application/x-ms-xbap, */*");
@@ -161,17 +229,17 @@ public class LoginInsiis {
         postMethod.setRequestHeader("Cache-Control", "no-cache");
         postMethod.setRequestHeader("Connection", "keep-alive");
         postMethod.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        postMethod.setRequestHeader("Host", "10.255.5.11:8080");
-        postMethod.setRequestHeader("Referer", "http://10.255.5.11:8080/insiis/");
+        postMethod.setRequestHeader("Host", host);
+        postMethod.setRequestHeader("Referer", insiisUrl);
         postMethod.setRequestHeader("User-Agent", "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)");
         //把官网需要提交的参数添加
-        postMethod.addParameter("passwd", "e1dedb80775489a50158c94b36af96bb");
+        postMethod.addParameter("passwd", passwordMD5);
         postMethod.addParameter("submitbtn.x", "0");
         postMethod.addParameter("submitbtn.y", "0");
-        postMethod.addParameter("username", "xxk");
+        postMethod.addParameter("username", loginName);
         postMethod.addParameter("verifycode", verifyCode);
 
-        int bb=httpClient.executeMethod(postMethod);
+        int bb = httpClient.executeMethod(postMethod);
 
         //开始得到网站返回值
 //            byte[] responseBody = null;
@@ -186,11 +254,22 @@ public class LoginInsiis {
 //            System.out.println(result);
         return bb;
     }
-    public static JSONObject InsiisPost(String url,HashMap<String,Object> params) throws IOException, ServiceException {
+
+    /**
+     * 向社保系统发起请求
+     *
+     * @param url
+     * @param params
+     * @return
+     * @throws IOException
+     * @throws ServiceException
+     */
+    public static JSONObject InsiisPost(String url, HashMap<String, Object> params) throws IOException, ServiceException {
         HttpClient httpClient = new HttpClient();
         PostMethod postMethod = new PostMethod(url);
         //获取提取验证码时得到的cookie；
         postMethod.setRequestHeader("Cookie", cashcookie);
+        //postMethod.setRequestHeader("Cookie", "JSESSIONID=B7B3C2268352D3402FD79E8E531DC88B; __guid=96992031.765794392949568500.1529900658604.6194");
         // referer指当前页面从哪里来的，页面为了限制机器操作的方法一般为cookie,referer和验证码；
         //设置一些header
         postMethod.setRequestHeader("Accept", "*/*");
@@ -199,9 +278,10 @@ public class LoginInsiis {
         postMethod.setRequestHeader("Cache-Control", "no-cache");
         postMethod.setRequestHeader("Connection", "keep-alive");
         postMethod.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        postMethod.setRequestHeader("Host", "10.255.5.11:8080");
-        postMethod.setRequestHeader("Referer", "http://10.255.5.11:8080/insiis/");
+        postMethod.setRequestHeader("Host", host);
+        postMethod.setRequestHeader("Referer", insiisUrl);
         postMethod.setRequestHeader("User-Agent", "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)");
+        postMethod.setRequestHeader("X-Requested-With", "XMLHttpRequest");
         //把官网需要提交的参数添加
 
         if (params != null && !params.isEmpty()) {
@@ -209,35 +289,99 @@ public class LoginInsiis {
                 postMethod.addParameter(key, params.get(key).toString());
             }
         }
-
-        int bb=httpClient.executeMethod(postMethod);
+        postMethod.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");//社保系统字符集是GBK
+        int bb = httpClient.executeMethod(postMethod);
 
         //开始得到网站返回值
-            byte[] responseBody = null;
-            try {
-                responseBody = postMethod.getResponseBody();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+        byte[] responseBody = null;
+        try {
+            responseBody = postMethod.getResponseBody();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            throw new ServiceException("解析请求返回出错:" + e.getMessage());
+        }
+        //转成字符串并以json格式返回页面
+        String result = new String(responseBody, "GBK");
+        // String result2=new String(responseBody, "iso8859-1");
+        System.out.println(bb + " " + result);
+        JSONObject json = JSONObject.parseObject(result);
+
+        if (json.get("mainMessage").toString().contains("数据库处理异常！")) {
+            json.clear();
+            json = InsiisPostTestLogin();//查看数据库处理异常！是否是因为没登陆
+        }
+        if (json.get("mainMessage").toString().contains("登陆超时")) {
+            int cout = 0;
+            while (cout < 10) {
+                if (retrunLoginCookies() == 200) {
+                    break;
+                }
+                cout++;
+                if (cout > 5) {
+                    throw new ServiceException("登陆社保中心系统出错！");
+                }
             }
-            //转成字符串并以json格式返回页面
-            String result=new String(responseBody, "GBK");
-            System.out.println(bb+" "+result);
-        JSONObject json=JSONObject.parseObject(result);
-        if(json.get("mainMessage").toString().contains("登陆超时")){
-            int cout=0;
-           while(cout<10) {
-              if(retrunLoginCookies()==200) {
-                  break;
-              }
-               cout++;
-              if(cout>5){
-                  throw new ServiceException("登陆社保中心系统出错！");
-              }
-           }
-            json= InsiisPost(url,params);//重新发起请求
+            json = InsiisPost(url, params);//重新发起请求
         }
         return json;
     }
+
+    /**
+     * 发起一个验证登陆的交易 验证当前是否登陆
+     *
+     * @return
+     * @throws IOException
+     * @throws ServiceException
+     */
+    public static JSONObject InsiisPostTestLogin() throws IOException, ServiceException {
+        String url = insiisUrl + "/com/insigma/siis/local/module/common/search/GetPersonByIdAction.do?method=getPersonById";
+        HashMap<String, Object> params = new HashMap<String, Object>();
+        params.put("personId", 106983);//随便找一个AAC001
+        HttpClient httpClient = new HttpClient();
+        PostMethod postMethod = new PostMethod(url);
+        //获取提取验证码时得到的cookie；
+        postMethod.setRequestHeader("Cookie", cashcookie);
+        //postMethod.setRequestHeader("Cookie", "JSESSIONID=B7B3C2268352D3402FD79E8E531DC88B; __guid=96992031.765794392949568500.1529900658604.6194");
+        // referer指当前页面从哪里来的，页面为了限制机器操作的方法一般为cookie,referer和验证码；
+        //设置一些header
+        postMethod.setRequestHeader("Accept", "*/*");
+        postMethod.setRequestHeader("Accept-Encoding", "gzip, deflate");
+        postMethod.setRequestHeader("Accept-Language", "zh-Hans-CN, zh-Hans; q=0.8, zh-Hant-HK; q=0.5, zh-Hant; q=0.3");
+        postMethod.setRequestHeader("Cache-Control", "no-cache");
+        postMethod.setRequestHeader("Connection", "keep-alive");
+        postMethod.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        postMethod.setRequestHeader("Host", host);
+        postMethod.setRequestHeader("Referer", insiisUrl);
+        postMethod.setRequestHeader("User-Agent", "Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729)");
+        postMethod.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        //把官网需要提交的参数添加
+
+        if (params != null && !params.isEmpty()) {
+            for (String key : params.keySet()) {
+                postMethod.addParameter(key, params.get(key).toString());
+            }
+        }
+        postMethod.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");//社保系统字符集是GBK
+        int bb = httpClient.executeMethod(postMethod);
+
+        //开始得到网站返回值
+        byte[] responseBody = null;
+        try {
+            responseBody = postMethod.getResponseBody();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            throw new ServiceException("解析请求返回出错:" + e.getMessage());
+        }
+        //转成字符串并以json格式返回页面
+        String result = new String(responseBody, "GBK");
+        // String result2=new String(responseBody, "iso8859-1");
+        System.out.println(bb + " " + result);
+        JSONObject json = JSONObject.parseObject(result);
+
+        return json;
+    }
+
 
 }
