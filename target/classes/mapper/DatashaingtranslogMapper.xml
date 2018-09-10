@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.DatashaingtranslogMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Datashaingtranslog">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="SNO" jdbcType="DECIMAL" property="sno" />
+    <result column="TRANSID" jdbcType="VARCHAR" property="transid" />
+    <result column="SENDCODE" jdbcType="VARCHAR" property="sendcode" />
+    <result column="SENDNODECODE" jdbcType="VARCHAR" property="sendnodecode" />
+    <result column="RECEIVECODE" jdbcType="VARCHAR" property="receivecode" />
+    <result column="RECEIVENODECODE" jdbcType="VARCHAR" property="receivenodecode" />
+    <result column="ITRADETYPE" jdbcType="VARCHAR" property="itradetype" />
+    <result column="RESULTS" jdbcType="VARCHAR" property="results" />
+    <result column="STARTTIME" jdbcType="TIMESTAMP" property="starttime" />
+    <result column="UPDATETIME" jdbcType="TIMESTAMP" property="updatetime" />
+    <result column="AAE013" jdbcType="VARCHAR" property="aae013" />
+    <result column="REQUEST" jdbcType="VARCHAR" property="request" />
+    <result column="VARIN" jdbcType="CLOB" property="varin" />
+    <result column="VAROUT" jdbcType="CLOB" property="varout" />
+  </resultMap>
+</mapper>

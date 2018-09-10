@@ -1,15 +1,19 @@
 package com.company.project.web;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.company.project.core.DataShaingResult;
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
 import com.company.project.core.ServiceException;
+import com.company.project.dao.PublicMapper;
 import com.company.project.model.Ac01;
 import com.company.project.model.BasicinfoDTO;
+import com.company.project.model.Datashaingtranslog;
 import com.company.project.service.*;
 import com.company.project.service.datasharing.DcryptUtils;
 import com.company.project.service.datasharing.RSAUtils;
+import com.fasterxml.jackson.databind.jsonFormatVisitors.JsonAnyFormatVisitor;
 import org.apache.axis2.AxisFault;
 import org.springframework.web.bind.annotation.*;
 import tk.mybatis.mapper.entity.Condition;
@@ -31,6 +35,10 @@ import java.util.Map;
 public class CasiAPIController {
     @Resource
     private Ac01Service ac01Service;
+    @Resource
+    private DatashaingtranslogService DLogService;
+    @Resource
+    private PublicMapper publicMapper;
     @Resource
     private DateSharing ds;//有spring 注入的工具类 不能new 只能Spring注入
     private static HashMap<String, String> phone = new HashMap<String, String>();
@@ -148,35 +156,57 @@ public class CasiAPIController {
      */
     @PostMapping("/dataSharing")
     public DataShaingResult dataSharing(@RequestParam String request, @RequestParam String sign) throws IOException {
+        Datashaingtranslog dlog=new Datashaingtranslog();//日志表
+        dlog.setSno(publicMapper.querySequenceByParam("SQ_SNO"));//取得序列号
+
         boolean b = DcryptUtils.verify(request, sign);
         Object obj = new Object();
         obj = "未找到对应的接口";
         if (!b) {
+            dlog.setRequest(request);
+            dlog.setVarout("签名验证不通过");
+            dlog.setTransid(dlog.getSno()+"_0");
+            DLogService.save(dlog);//插入日志
             throw new ServiceException("签名验证不通过");
         }
         Map<String, Object> map = DcryptUtils.decryptByPublicKey(request);
         System.out.println(map);
-        if (map.get("TradeCode").toString().equals("6001")) {//转出验证
-            obj = ds.trade6001(map);
-        }
-        if (map.get("TradeCode").toString().equals("6002")) {//转出打印
-            obj = ds.trade6002(map);
-        }
-        if (map.get("TradeCode").toString().equals("6003")) {//参保信息变更验证
-            obj = ds.trade6003(map);
-        }
-        if (map.get("TradeCode").toString().equals("6004")) {//人员手机及地址变更
-            obj = ds.trade6004(map);
-        }
-        if (map.get("TradeCode").toString().equals("6032")) {//通过AAC001人员基本信息查询(人员搜索框)
-            obj = ds.trade6032(map);
+
+        dlog.setRequest(request);
+        dlog.setTransid(dlog.getSno()+"_"+map.get("TradeCode").toString());
+        dlog.setItradetype(map.get("TradeCode").toString());
+        dlog.setVarin(JSON.toJSONString(map));
+        DLogService.save(dlog);//插入日志
+        try {
+            if (map.get("TradeCode").toString().equals("6001")) {//转出验证
+                obj = ds.trade6001(map);
+            }
+            if (map.get("TradeCode").toString().equals("6002")) {//转出打印
+                obj = ds.trade6002(map);
+            }
+            if (map.get("TradeCode").toString().equals("6003")) {//参保信息变更验证
+                obj = ds.trade6003(map);
+            }
+            if (map.get("TradeCode").toString().equals("6004")) {//人员手机及地址变更
+                obj = ds.trade6004(map);
+            }
+            if (map.get("TradeCode").toString().equals("6032")) {//通过AAC001人员基本信息查询(人员搜索框)
+                obj = ds.trade6032(map);
+            }
+        }catch (Exception e){
+            dlog.setVarout(e.getMessage());
+            DLogService.update(dlog);//更新日志
+            throw new ServiceException(e.getMessage());//再次把异常抛出供拦截器拦截
         }
 
+
+        dlog.setVarout(obj.toString());
+        DLogService.update(dlog);//更新日志
         return ResultGenerator.genDSuccessResult(obj);
     }
 
     /**
-     * 本地测试用
+     * 杭州数据共享接口本地测试用
      *
      * @param request
      * @return
