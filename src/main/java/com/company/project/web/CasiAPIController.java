@@ -217,6 +217,12 @@ public class CasiAPIController {
             if (map.get("TradeCode").toString().equals("6010")) {//个体人员参保
                 obj = ds.trade6010(map);
             }
+            if (map.get("TradeCode").toString().equals("6011")) {//医保家庭共济校验
+                obj = ds.trade6011(map);
+            }
+            if (map.get("TradeCode").toString().equals("6012")) {//医保家庭共济
+                obj = ds.trade6012(map);
+            }
             if (map.get("TradeCode").toString().equals("6032")) {//通过AAC001人员基本信息查询(人员搜索框)
                 obj = ds.trade6032(map);
             }

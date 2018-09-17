@@ -11,6 +11,7 @@ import com.company.project.dao.HnsiAPIMapper;
 import com.company.project.dao.PublicMapper;
 import com.company.project.model.Ab51;
 import com.company.project.model.Ac01;
+import com.company.project.model.Ka27;
 import org.apache.commons.httpclient.util.DateUtil;
 import org.apache.commons.lang3.time.DateFormatUtils;
 import org.apache.commons.lang3.time.DateUtils;
@@ -33,6 +34,8 @@ public class DateSharing {
     private Ac01Service ac01Service1;
     @Resource
     private Ab51Service ab51Service;
+    @Resource
+    private Ka27Service ka27Service;
     @Resource
     private DataSharingMapper dataSharingMapper;
     @Resource
@@ -1046,12 +1049,12 @@ public class DateSharing {
         mapSql.clear();
         mapSql.put("SQL", "select aae140 from ac02  where aae140 in('10','20','21') and aac001=" + aac001);
         List listac02 = dataSharingMapper.commQuery(mapSql);
-        if(listac02.size()>0){
+        if (listac02.size() > 0) {
             map1.put("aac050", "02");//续保
             map1.put("aae160", "21");//调入再参保
         }
-        String qyaic020="";
-        String ybaic020="";
+        String qyaic020 = "";
+        String ybaic020 = "";
         mapSql.clear();
         mapSql.put("SQL", "select round((select max(eaa023)\n" +
                 "                      from aa02\n" +
@@ -1071,24 +1074,24 @@ public class DateSharing {
                 "                             where eaa022 = '941'\n" +
                 "                               and to_char(sysdate, 'yyyymm') >= eaa021)) yb from dual ");
         List<HashMap<String, Object>> listaic020 = dataSharingMapper.commQuery(mapSql);
-        qyaic020=listaic020.get(0).get("QY").toString();
-        ybaic020=listaic020.get(0).get("YB").toString();
+        qyaic020 = listaic020.get(0).get("QY").toString();
+        ybaic020 = listaic020.get(0).get("YB").toString();
 
         map1.put("list2Data", "[{\"aaa027\":\"330127\",\"aaa041\":0.08,\"aaa042\":0.1,\"aab001\":\"\",\"aab004\":\"\"," +
                 "\"aab033\":\"2\",\"aac001\":0,\"aac008\":\"1\",\"aac009\":\"\",\"aac013\":\"\",\"aac016\":\"\",\"aac031\":\"1\"," +
-                "\"aac033\":0,\"aac050\":\"\",\"aae005\":\"\",\"aae030\":\""+aae030+"\",\"aae140\":\"10\",\"aae180_lower\":"+qyaic020+"," +
-                "\"aae180_upper\":"+qyaic020+",\"aaz001\":0,\"aaz159\":0,\"aaz289\":1003,\"aic001\":0,\"aic020\":"+qyaic020+",\"check\":true," +
+                "\"aac033\":0,\"aac050\":\"\",\"aae005\":\"\",\"aae030\":\"" + aae030 + "\",\"aae140\":\"10\",\"aae180_lower\":" + qyaic020 + "," +
+                "\"aae180_upper\":" + qyaic020 + ",\"aaz001\":0,\"aaz159\":0,\"aaz289\":1003,\"aic001\":0,\"aic020\":" + qyaic020 + ",\"check\":true," +
                 "\"eaa018\":\"0\",\"eac066\":\"\",\"eac070\":\"0\",\"eac086\":\"1\",\"eac101\":\"\",\"eaz132_ac02\":\"1\"," +
                 "\"eaz132_ac20\":\"1\",\"eaz138\":\"\",\"ezd001\":\"00\",\"ezd134\":0,\"max_aae003\":0},{\"aaa027\":\"330127\"," +
                 "\"aaa041\":0.05,\"aaa042\":0,\"aab001\":\"\",\"aab004\":\"\",\"aab033\":\"2\",\"aac001\":0,\"aac008\":\"1\"," +
                 "\"aac009\":\"\",\"aac013\":\"\",\"aac016\":\"\",\"aac031\":\"1\",\"aac033\":0,\"aac050\":\"\",\"aae005\":\"\"," +
-                "\"aae030\":\""+aae030+"\",\"aae140\":\"20\",\"aae180_lower\":"+ybaic020+",\"aae180_upper\":"+ybaic020+",\"aaz001\":0,\"aaz159\":0," +
-                "\"aaz289\":2005,\"aic001\":0,\"aic020\":"+ybaic020+",\"check\":true,\"eaa018\":\"0\",\"eac066\":\"\",\"eac070\":\"0\"," +
+                "\"aae030\":\"" + aae030 + "\",\"aae140\":\"20\",\"aae180_lower\":" + ybaic020 + ",\"aae180_upper\":" + ybaic020 + ",\"aaz001\":0,\"aaz159\":0," +
+                "\"aaz289\":2005,\"aic001\":0,\"aic020\":" + ybaic020 + ",\"check\":true,\"eaa018\":\"0\",\"eac066\":\"\",\"eac070\":\"0\"," +
                 "\"eac086\":\"1\",\"eac101\":\"\",\"eaz132_ac02\":\"1\",\"eaz132_ac20\":\"1\",\"eaz138\":\"\",\"ezd001\":\"00\"," +
                 "\"ezd134\":0,\"max_aae003\":0},{\"aaa027\":\"330127\",\"aaa041\":5,\"aaa042\":0,\"aab001\":\"\",\"aab004\":\"\"," +
                 "\"aab033\":\"2\",\"aac001\":0,\"aac008\":\"1\",\"aac009\":\"\",\"aac013\":\"\",\"aac016\":\"\",\"aac031\":\"1\"," +
-                "\"aac033\":0,\"aac050\":\"\",\"aae005\":\"\",\"aae030\":\""+aae030+"\",\"aae140\":\"21\",\"aae180_lower\":"+ybaic020+"," +
-                "\"aae180_upper\":"+ybaic020+",\"aaz001\":0,\"aaz159\":0,\"aaz289\":2101,\"aic001\":0,\"aic020\":"+ybaic020+",\"check\":true," +
+                "\"aac033\":0,\"aac050\":\"\",\"aae005\":\"\",\"aae030\":\"" + aae030 + "\",\"aae140\":\"21\",\"aae180_lower\":" + ybaic020 + "," +
+                "\"aae180_upper\":" + ybaic020 + ",\"aaz001\":0,\"aaz159\":0,\"aaz289\":2101,\"aic001\":0,\"aic020\":" + ybaic020 + ",\"check\":true," +
                 "\"eaa018\":\"0\",\"eac066\":\"\",\"eac070\":\"0\",\"eac086\":\"0\",\"eac101\":\"\",\"eaz132_ac02\":\"1\"," +
                 "\"eaz132_ac20\":\"1\",\"eaz138\":\"\",\"ezd001\":\"00\",\"ezd134\":0,\"max_aae003\":0}]");
 
@@ -1096,7 +1099,7 @@ public class DateSharing {
         trade6009(map1);//保存前再验证一次
 
         JSONObject json = LoginInsiis.returnInsiisPost("6010", aac001, "0",
-                "社保编码:" + ac01.getEac001() + " 姓名:" + ac01.getAac003() + " 身份证:" + ac01.getAae135()+" 单位:县托管中心",
+                "社保编码:" + ac01.getEac001() + " 姓名:" + ac01.getAac003() + " 身份证:" + ac01.getAae135() + " 单位:县托管中心",
                 map1);//向社保系统发起参保请求
 
         if (json.get("mainMessage").equals("ok")) {
@@ -1126,6 +1129,112 @@ public class DateSharing {
         return json;
     }
 
+
+    /**
+     * 医保家庭共济校验
+     *
+     * @param map
+     * @return
+     */
+    public JSONObject trade6011(Map<String, Object> map) throws IOException {
+        try {
+            map.get("AAE135").toString();//授权人
+            map.get("AAE135_S").toString();//被授权人
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+
+        Long aac001 = queryPerson(map.get("AAE135").toString(), null);
+        Long aac001_s = queryPerson(map.get("AAE135_S").toString(), null);
+        if(aac001.equals(0L)||aac001_s.equals(0L)){
+            throw new ServiceException("人员基本信息不存在!");
+        }
+
+
+        Map<String, String> mapSql = new HashMap<>();
+        mapSql.clear();
+        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001+" and aae140='20' and aae100='1' and " +
+                "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
+        List listkc51 = dataSharingMapper.commQuery(mapSql);
+        if(listkc51.size()==0){
+            throw new ServiceException("授权人职工医保未正常享受!");
+        }
+        mapSql.clear();
+        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001_s+"  and aae100='1' and " +
+                "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
+        List listkc51_s = dataSharingMapper.commQuery(mapSql);
+        if(listkc51_s.size()==0){
+            throw new ServiceException("被授权人医保未正常享受!");
+        }
+        mapSql.clear();
+        mapSql.put("SQL", "select 1 from ka27 where aac001=" + aac001_s+"  and aae100='1' and " +
+                "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
+        List listka27 = dataSharingMapper.commQuery(mapSql);
+        if(listka27.size()>0){
+            throw new ServiceException("被授权人已经有绑定记录!");
+        }
+        Ac01 ac01=new Ac01();
+        ac01=ac01Service1.findBy("aac001",aac001);
+        Ac01 ac01_s=new Ac01();
+        ac01_s=ac01Service1.findBy("aac001",aac001_s);
+
+
+        JSONObject json = new JSONObject();
+        json.put("AAE135",ac01.getAae135());
+        json.put("AAC003",ac01.getAac003());
+        json.put("AAC001",ac01.getAac001());
+        json.put("AAE135_S",ac01_s.getAae135());
+        json.put("AAC003_S",ac01_s.getAac003());
+        json.put("AAC001_S",ac01_s.getAac001());
+        return json;
+    }
+    /**
+     * 家庭共济
+     *
+     * @param map
+     * @return
+     * @throws IOException
+     */
+    public JSONObject trade6012(Map<String, Object> map) throws IOException {
+        try {
+            map.get("AAE135").toString();//授权人
+            map.get("AAE135_S").toString();//被授权人
+            map.get("AAC001").toString();//授权人ID
+            map.get("AAC001_S").toString();//被授权人ID
+            map.get("AKA012").toString();//两者的关系（0：父母；1：配偶；2：子女）
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        HashMap<String, Object> map1 = new HashMap<String, Object>();
+        map1.putAll(map);
+        trade6011(map1);
+        Ac01 ac01=new Ac01();
+        ac01=ac01Service1.findBy("aac001",Long.valueOf(map.get("AAC001").toString()));
+        Ac01 ac01_s=new Ac01();
+        ac01_s=ac01Service1.findBy("aac001",Long.valueOf(map.get("AAC001_S").toString()));
+        Ka27 ka27=new Ka27();
+        ka27.setAac001(ac01_s.getAac001());
+        ka27.setAac001S(ac01.getAac001());
+        ka27.setAka027(publicMapper.querySequenceByParam("ssim.sq_aka027"));
+        ka27.setAka012(map.get("AKA012").toString());
+        ka27.setAae100("1");
+        ka27.setAae030(Integer.valueOf(DateFormatUtils.format(publicMapper.queryDBdate(), "yyyyMMdd")));
+        ka27.setAae031(29991231);
+        ka27.setAae036(publicMapper.queryDBdate());
+        ka27.setAae135(ac01_s.getAae135());
+        ka27.setAae135S(ac01.getAae135());
+        ka27.setAac003(ac01_s.getAac003());
+        ka27.setAac003S(ac01.getAac003());
+        ka27Service.save(ka27);
+        JSONObject json = new JSONObject();
+        json.put("AAE135",ac01.getAae135());
+        json.put("AAC003",ac01.getAac003());
+        json.put("AAC001",ac01.getAac001());
+        json.put("AAE135_S",ac01_s.getAae135());
+        json.put("AAC003_S",ac01_s.getAac003());
+        json.put("AAC001_S",ac01_s.getAac001());
+        return json;
+    }
     /**
      * 人员基本信息查询(人员搜索框)
      *
