@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.PreJfjlcommformMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.PreJfjlcommform">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="UNID" jdbcType="VARCHAR" property="unid" />
+    <result column="PROJID" jdbcType="VARCHAR" property="projid" />
+    <result column="FORM_NAME" jdbcType="VARCHAR" property="formName" />
+    <result column="FORM_UNID" jdbcType="VARCHAR" property="formUnid" />
+    <result column="FORM_SORT" jdbcType="DECIMAL" property="formSort" />
+    <result column="USE_UNID" jdbcType="VARCHAR" property="useUnid" />
+    <result column="USE_TYPE" jdbcType="VARCHAR" property="useType" />
+    <result column="ITEM_VALUES" jdbcType="VARCHAR" property="itemValues" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="BELONGSYSTEM" jdbcType="VARCHAR" property="belongsystem" />
+    <result column="CREATE_TIME" jdbcType="VARCHAR" property="createTime" />
+    <result column="SYNC_STATUS" jdbcType="VARCHAR" property="syncStatus" />
+    <result column="SYNC_RESULT" jdbcType="VARCHAR" property="syncResult" />
+    <result column="DATAVERSION" jdbcType="DECIMAL" property="dataversion" />
+    <result column="YLZD1" jdbcType="VARCHAR" property="ylzd1" />
+    <result column="YLZD2" jdbcType="VARCHAR" property="ylzd2" />
+    <result column="EXTEND" jdbcType="CLOB" property="extend" />
+  </resultMap>
+</mapper>

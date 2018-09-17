@@ -1,7 +1,10 @@
 package com.company.project.dao;
 
 import com.company.project.model.Ac01;
+import com.company.project.model.SBCXDTO;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.mapping.StatementType;
 
 import java.util.HashMap;
 import java.util.List;
@@ -64,4 +67,14 @@ public interface DataSharingMapper {
      */
     @Select("${SQL}")
     public List<HashMap<String,Object>> commQuery(Map<String,String> map) ;
+
+    /**
+     * 调用存储过程同步就业人员信息
+     * @param map
+     */
+    @Select("  call cajy.SBP_INTERFACE.p_sync_person(#{arg,mode=IN,jdbcType=VARCHAR},#{aac001,mode=IN,jdbcType=INTEGER}," +
+            "#{eab009,mode=IN,jdbcType=VARCHAR},#{eab030,mode=IN,jdbcType=VARCHAR},#{aab301,mode=IN,jdbcType=VARCHAR}," +
+            "#{ret,mode=OUT,jdbcType=INTEGER},#{msg,mode=OUT,jdbcType=VARCHAR})")
+    @Options(statementType= StatementType.CALLABLE )
+    public void sync(HashMap<String,Object> map);
 }

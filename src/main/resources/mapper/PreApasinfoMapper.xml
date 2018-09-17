@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.PreApasinfoMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.PreApasinfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="PROJID" jdbcType="VARCHAR" property="projid" />
+    <id column="DATAVERSION" jdbcType="DECIMAL" property="dataversion" />
+    <result column="PROJPWD" jdbcType="VARCHAR" property="projpwd" />
+    <result column="SERVICECODE" jdbcType="VARCHAR" property="servicecode" />
+    <result column="SERVICEVERSION" jdbcType="DECIMAL" property="serviceversion" />
+    <result column="SERVICENAME" jdbcType="VARCHAR" property="servicename" />
+    <result column="PROJECTNAME" jdbcType="VARCHAR" property="projectname" />
+    <result column="INFOTYPE" jdbcType="VARCHAR" property="infotype" />
+    <result column="BUS_TYPE" jdbcType="VARCHAR" property="busType" />
+    <result column="REL_BUS_ID" jdbcType="VARCHAR" property="relBusId" />
+    <result column="APPLYNAME" jdbcType="VARCHAR" property="applyname" />
+    <result column="APPLY_CARDTYPE" jdbcType="VARCHAR" property="applyCardtype" />
+    <result column="APPLY_CARDNUMBER" jdbcType="VARCHAR" property="applyCardnumber" />
+    <result column="CONTACTMAN" jdbcType="VARCHAR" property="contactman" />
+    <result column="CONTACTMAN_CARDTYPE" jdbcType="VARCHAR" property="contactmanCardtype" />
+    <result column="CONTACTMAN_CARDNUMBER" jdbcType="VARCHAR" property="contactmanCardnumber" />
+    <result column="TELPHONE" jdbcType="VARCHAR" property="telphone" />
+    <result column="POSTCODE" jdbcType="VARCHAR" property="postcode" />
+    <result column="ADDRESS" jdbcType="VARCHAR" property="address" />
+    <result column="LEGALMAN" jdbcType="VARCHAR" property="legalman" />
+    <result column="DEPTID" jdbcType="VARCHAR" property="deptid" />
+    <result column="DEPTNAME" jdbcType="VARCHAR" property="deptname" />
+    <result column="SS_ORGCODE" jdbcType="VARCHAR" property="ssOrgcode" />
+    <result column="RECEIVE_USEID" jdbcType="VARCHAR" property="receiveUseid" />
+    <result column="RECEIVE_NAME" jdbcType="VARCHAR" property="receiveName" />
+    <result column="APPLYFROM" jdbcType="VARCHAR" property="applyfrom" />
+    <result column="APPROVE_TYPE" jdbcType="VARCHAR" property="approveType" />
+    <result column="APPLY_PROPERTIY" jdbcType="VARCHAR" property="applyPropertiy" />
+    <result column="RECEIVETIME" jdbcType="VARCHAR" property="receivetime" />
+    <result column="BELONGTO" jdbcType="VARCHAR" property="belongto" />
+    <result column="AREACODE" jdbcType="VARCHAR" property="areacode" />
+    <result column="DATASTATE" jdbcType="VARCHAR" property="datastate" />
+    <result column="BELONGSYSTEM" jdbcType="VARCHAR" property="belongsystem" />
+    <result column="CREATE_TIME" jdbcType="VARCHAR" property="createTime" />
+    <result column="SYNC_STATUS" jdbcType="VARCHAR" property="syncStatus" />
+    <result column="SRC_IN_TIME" jdbcType="TIMESTAMP" property="srcInTime" />
+    <result column="YWZT" jdbcType="VARCHAR" property="ywzt" />
+    <result column="CHC001" jdbcType="VARCHAR" property="chc001" />
+    <result column="EXTEND" jdbcType="CLOB" property="extend" />
+  </resultMap>
+</mapper>

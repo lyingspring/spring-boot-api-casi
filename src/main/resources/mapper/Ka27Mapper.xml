@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.Ka27Mapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Ka27">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="AKA027" jdbcType="DECIMAL" property="aka027" />
+    <result column="AAC001" jdbcType="DECIMAL" property="aac001" />
+    <result column="AAC003" jdbcType="VARCHAR" property="aac003" />
+    <result column="AAE135" jdbcType="VARCHAR" property="aae135" />
+    <result column="AAC001_S" jdbcType="DECIMAL" property="aac001S" />
+    <result column="AAC003_S" jdbcType="VARCHAR" property="aac003S" />
+    <result column="AAE135_S" jdbcType="VARCHAR" property="aae135S" />
+    <result column="AKA012" jdbcType="VARCHAR" property="aka012" />
+    <result column="AAE030" jdbcType="DECIMAL" property="aae030" />
+    <result column="AAE031" jdbcType="DECIMAL" property="aae031" />
+    <result column="AAE036" jdbcType="TIMESTAMP" property="aae036" />
+    <result column="AAE100" jdbcType="VARCHAR" property="aae100" />
+    <result column="AAE013" jdbcType="VARCHAR" property="aae013" />
+  </resultMap>
+</mapper>

@@ -1,4 +1,4 @@
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 1307007006, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6010" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -6,11 +6,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T102023.200.json
+<> 2018-09-18T025230.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 1307007006, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6010" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -18,11 +18,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T102020.200.json
+<> 2018-09-18T020531.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 1307007006, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6010" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -30,11 +30,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T102019.200.json
+<> 2018-09-18T020409.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 1307007006, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -42,11 +42,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T102018.200.json
+<> 2018-09-18T015650.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -54,11 +54,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T102014.200.json
+<> 2018-09-18T015614.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6010" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -66,11 +66,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T101852.200.json
+<> 2018-09-18T015550.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -78,431 +78,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-10T101732.200.json
+<> 2018-09-18T010840.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T101555.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T101047.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T101037.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T101027.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T101002.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId1":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100718.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"60321"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100635.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"60321"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100537.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"60321"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100429.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100354.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T100350.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T095914.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T095732.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T095724.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-10T095615.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T124815.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC003":"仇善兴","AAE135":"342530198508063910","TradeCode":"6003","AAE140":"10"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T034159.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request="AAC003":"仇善兴","AAE135":"342530198508063910","TradeCode":"6003","AAE140":"10"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T034109.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request="AAC003":"仇善兴","AAE135":"342530198508063910","TradeCode":"6003","AAE140":"10"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T034051.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request="AAC003":"仇善兴","AAE135":"342530198508063910","TradeCode":"6003","AAE140":"10"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T034027.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request="AAC003":"仇善兴","AAE135":"342530198508063910","TradeCode":"6003","AAE140":"10"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T033907.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T032348.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T032113.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T032018.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031738.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031439.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031354.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031254.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031155.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031127.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T031020.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T030937.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983,"TradeCode":"6032"}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T030924.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T030836.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983}
-Accept: */*
-Cache-Control: no-cache
-charset: UTF-8
-Content-Type: application/x-www-form-urlencoded
-
-sfz=330127197408153814
-
-<> 2018-09-07T030753.200.json
-
-###
-
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -512,17 +92,19 @@ sfz=330127197408153814
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"personId":106983}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127198907093021", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
 Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
+
+<> 2018-09-18T010611.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127195305076116", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -530,11 +112,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T102856.200.json
+<> 2018-09-18T010519.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6009" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -542,11 +124,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T102714.200.json
+<> 2018-09-18T010422.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6006" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -554,11 +136,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T095020.200.json
+<> 2018-09-17T111919.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6006" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -566,11 +148,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T091318.200.json
+<> 2018-09-17T111738.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "1201", "TradeCode": "6006" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -578,11 +160,11 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T091317.200.json
+<> 2018-09-17T111202.200.json
 
 ###
 
-POST http://127.0.0.1:8964/casiapi/getInfo?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAC001":"9300130004","PHONE":"13588776765","ADDR":"淳安县就看拮抗剂","TradeCode":"6004"}
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6006" }
 Accept: */*
 Cache-Control: no-cache
 charset: UTF-8
@@ -590,7 +172,427 @@ Content-Type: application/x-www-form-urlencoded
 
 sfz=330127197408153814
 
-<> 2018-09-06T091309.200.json
+<> 2018-09-17T110826.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T110722.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T110659.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T110427.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6007" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T110345.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6005" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T110320.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "HZSFZ":"330127195305076116","HZGX":"1","AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T105958.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6007" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T105736.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T100821.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T100720.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T100238.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T095923.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T095525.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T094441.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T094132.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 9300131000, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T092719.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6007" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T092616.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T092547.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T092527.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ "AAC001": 0, "CSRQ": 20180911, "AAE135": "330127201809112713", "XZ": "012711", "PHONE": "", "XB": "1", "MZ": "01", "AAC003": "王羽腾", "SQ": "271131", "ADDR": "", "BANK": "80", "ZJID": "2924", "TradeCode": "6008" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T092004.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127201809112713","TradeCode":"6007"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T091310.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127201809094148","TradeCode":"6007"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T091032.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127196906085127","TradeCode":"6007"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T090802.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127196906085127","TradeCode":"6005"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-17T090743.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"AAC001": 2445018703, 	"CSRQ": 19690608, 	"AAE135": "330127196906085127", 	"XZ": "012719", 	"PHONE": "13968119094", 	"XB": "2", 	"MZ": "01", 	"AAC003": "郑小梅", 	"SQ": "271909", 	"ADDR": "淳安县汾口镇舒翠村", 	"BANK": "80", 	"ZJID": "1201", 	"TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T025338.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"AAC001": 2445018703, 	"CSRQ": 19690608, 	"AAE135": "330127196906085127", 	"XZ": "012719", 	"PHONE": "13968119094", 	"XB": "2", 	"MZ": "01", 	"AAC003": "郑小梅", 	"SQ": "271909", 	"ADDR": "淳安县汾口镇舒翠村", 	"BANK": "80", 	"ZJID": "1201", 	"TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T024615.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"AAC001": 2445018703, 	"CSRQ": 19690608, 	"AAE135": "330127196906085127", 	"XZ": "012719", 	"PHONE": "13968119094", 	"XB": "2", 	"MZ": "01", 	"AAC003": "郑小梅", 	"SQ": "271909", 	"ADDR": "淳安县汾口镇舒翠村", 	"BANK": "80", 	"ZJID": "1201", 	"TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T024445.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"AAC001": 2445018703, 	"CSRQ": 19690608, 	"AAE135": "330127196906085127", 	"XZ": "012719", 	"PHONE": "13968119094", 	"XB": "2", 	"MZ": "01", 	"AAC003": "郑小梅", 	"SQ": "271909", 	"ADDR": "淳安县汾口镇舒翠村", 	"BANK": "80", 	"ZJID": "1201", 	"TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T022149.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"AAC001": 2445018703, 	"CSRQ": 19690608, 	"AAE135": "330127196906085127", 	"XZ": "012719", 	"PHONE": "13968119094", 	"XB": "2", 	"MZ": "01", 	"AAC003": "郑小梅", 	"SQ": "271909", 	"ADDR": "淳安县汾口镇舒翠村", 	"BANK": "80", 	"ZJID": "1201", 	"TradeCode": "6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T022039.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127196906085127","TradeCode":"6005"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T021048.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"CSRQ": "20180909", 	"AAC001": "0", 	"AAE135": "330127201809094148", 	"XZ": "012718", 	"PHONE": "", 	"JFINFO": [{ 			"ZJID": "1201", 			"JFJE": "100", 			"ZJMC": "居保普通人(100)" 		}, { 			"ZJID": "1202", 			"JFJE": "500", 			"ZJMC": "居保普通人(500)" 		}, { 			"ZJID": "1203", 			"JFJE": "700", 			"ZJMC": "居保普通人(700)" 		}, { 			"ZJID": "1204", 			"JFJE": "900", 			"ZJMC": "居保普通人(900)" 		}, { 			"ZJID": "1205", 			"JFJE": "1200", 			"ZJMC": "居保普通人(1200)" 		}, { 			"ZJID": "1206", 			"JFJE": "1500", 			"ZJMC": "居保普通人(1500)" 		}, { 			"ZJID": "1221", 			"JFJE": "2000", 			"ZJMC": "居保普通人(2000)" 		} 	], 	"XB": "2", 	"MZ": "01", 	"AAC003": "严欣妍", 	"SQ": "271801", 	"ADDR": "","TradeCode":"6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T125324.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"CSRQ": "20180909", 	"AAC001": "0", 	"AAE135": "330127201809094148", 	"XZ": "012718", 	"PHONE": "", 	"JFINFO": [{ 			"ZJID": "1201", 			"JFJE": "100", 			"ZJMC": "居保普通人(100)" 		}, { 			"ZJID": "1202", 			"JFJE": "500", 			"ZJMC": "居保普通人(500)" 		}, { 			"ZJID": "1203", 			"JFJE": "700", 			"ZJMC": "居保普通人(700)" 		}, { 			"ZJID": "1204", 			"JFJE": "900", 			"ZJMC": "居保普通人(900)" 		}, { 			"ZJID": "1205", 			"JFJE": "1200", 			"ZJMC": "居保普通人(1200)" 		}, { 			"ZJID": "1206", 			"JFJE": "1500", 			"ZJMC": "居保普通人(1500)" 		}, { 			"ZJID": "1221", 			"JFJE": "2000", 			"ZJMC": "居保普通人(2000)" 		} 	], 	"XB": "2", 	"MZ": "01", 	"AAC003": "严欣妍", 	"SQ": "271801", 	"ADDR": "","TradeCode":"6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T125140.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"CSRQ": "20180909", 	"AAC001": "0", 	"AAE135": "330127201809094148", 	"XZ": "012718", 	"PHONE": "", 	"JFINFO": [{ 			"ZJID": "1201", 			"JFJE": "100", 			"ZJMC": "居保普通人(100)" 		}, { 			"ZJID": "1202", 			"JFJE": "500", 			"ZJMC": "居保普通人(500)" 		}, { 			"ZJID": "1203", 			"JFJE": "700", 			"ZJMC": "居保普通人(700)" 		}, { 			"ZJID": "1204", 			"JFJE": "900", 			"ZJMC": "居保普通人(900)" 		}, { 			"ZJID": "1205", 			"JFJE": "1200", 			"ZJMC": "居保普通人(1200)" 		}, { 			"ZJID": "1206", 			"JFJE": "1500", 			"ZJMC": "居保普通人(1500)" 		}, { 			"ZJID": "1221", 			"JFJE": "2000", 			"ZJMC": "居保普通人(2000)" 		} 	], 	"XB": "2", 	"MZ": "01", 	"AAC003": "严欣妍", 	"SQ": "271801", 	"ADDR": "","TradeCode":"6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T124641.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={ 	"CSRQ": "20180909", 	"AAC001": "0", 	"AAE135": "330127201809094148", 	"XZ": "012718", 	"PHONE": "", 	"JFINFO": [{ 			"ZJID": "1201", 			"JFJE": "100", 			"ZJMC": "居保普通人(100)" 		}, { 			"ZJID": "1202", 			"JFJE": "500", 			"ZJMC": "居保普通人(500)" 		}, { 			"ZJID": "1203", 			"JFJE": "700", 			"ZJMC": "居保普通人(700)" 		}, { 			"ZJID": "1204", 			"JFJE": "900", 			"ZJMC": "居保普通人(900)" 		}, { 			"ZJID": "1205", 			"JFJE": "1200", 			"ZJMC": "居保普通人(1200)" 		}, { 			"ZJID": "1206", 			"JFJE": "1500", 			"ZJMC": "居保普通人(1500)" 		}, { 			"ZJID": "1221", 			"JFJE": "2000", 			"ZJMC": "居保普通人(2000)" 		} 	], 	"XB": "2", 	"MZ": "01", 	"AAC003": "严欣妍", 	"SQ": "271801", 	"ADDR": "","TradeCode":"6006" }
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-14T124125.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127201809094148","TradeCode":"6005"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-13T111752.200.json
+
+###
+
+POST http://127.0.0.1:8964/casiapi/test?passwd=e1dedb80775489a50158c94b36af96bb&submitbtn.x=0&submitbtn.y=0&username=xxk&verifycode=8877&method=getPersonById&sign=n58Wv1MH6eUEK4FtBdy9srOvQzWsQ5sKwOV7UZWNlS2RUlrCLfVQsMIY5jWAjvp8E6drtQrp+h+uTyZrnKX+dMHpI9bvHgNnCB6j/8vYonEQw2bT5Jrysy0K7WJKnafsqfa50JhNIMl6lBW5I+nlonA0CjnBhpxd67Tv7pU9sH0=&request={"AAE135":"330127201809094148","TradeCode":"6005"}
+Accept: */*
+Cache-Control: no-cache
+charset: UTF-8
+Content-Type: application/x-www-form-urlencoded
+
+sfz=330127197408153814
+
+<> 2018-09-13T111719.200.json
 
 ###
 

@@ -34,11 +34,32 @@ public interface PublicMapper {
     Date queryDBdate();
 
     /**
+     * 获取数据库year
+     * @return
+     */
+    @Select("select to_char(sysdate,'yyyy') Y from dual")
+    Long queryDBYear();
+
+    /**
+     * 获取数据库YYYYMM
+     * @return
+     */
+    @Select("select to_char(sysdate,'yyyymm') YM from dual")
+    Long queryDBYearMonth();
+
+    /**
      * 获取数据字典
      * @return
      */
     @Select("select sbp_public.f_Get_Codeview(#{aaa100},#{aaa102}) from dual")
     String getCodeValue(@Param("aaa100") String aaa100,@Param("aaa102") String aaa102);
+
+    /**
+     * 获取数据字典AAA105
+     * @return
+     */
+    @Select("select aaa105 from aa10 where aaa100=#{aaa100} and aaa102=#{aaa102}")
+    String getCodeAaa105(@Param("aaa100") String aaa100,@Param("aaa102") String aaa102);
 
     /**
      * 调用存储过程

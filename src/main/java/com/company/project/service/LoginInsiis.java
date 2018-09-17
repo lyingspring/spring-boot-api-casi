@@ -27,8 +27,8 @@ import java.util.HashMap;
 public class LoginInsiis {
     private static String filePath = "d://springBoot_tmp/yzm.png";
     private static String cashcookie = "";
-    private static String insiisUrl = "http://10.255.5.11:8080/insiis";//系统登陆地址
-    private static String host = "10.255.5.11:8080";
+    private static String insiisUrl = "http://10.255.5.110:8080/insiis";//系统登陆地址
+    private static String host = "10.255.5.110:8080";
     private static String loginName = "xxk";//登陆用户名
     private static String passwordMD5 = "e1dedb80775489a50158c94b36af96bb";//MD5加密后的密码
 
@@ -74,7 +74,7 @@ public class LoginInsiis {
         map = TradeCodeMap;
         map.put("userlog", "{\"functionid\":\"" + functionid + "\",\"aac001\":" + aac001 + ",\"aab001\":" + aab001 + ",\"digest\":" +
                 "\"" + digest + "\",\"prcol1\":\"\",\"prcol2\":\"\",\"prcol3\":\"\"," +
-                "\"prcol4\":\"\",\"prcol5\":\"\",\"prcol6\":\"\",\"prcol7\":\"\",\"prcol8\":\"\",\"orisource\":\"此条记录由外网系统调用接口操作:"+input+"\"}");
+                "\"prcol4\":\"\",\"prcol5\":\"\",\"prcol6\":\"\",\"prcol7\":\"\",\"prcol8\":\"\",\"orisource\":\"此条记录由外网系统调用接口操作\"}");
 
         json = InsiisPost(url, map);
 
@@ -303,7 +303,8 @@ public class LoginInsiis {
         }
         //转成字符串并以json格式返回页面
         String result = new String(responseBody, "GBK");
-        // String result2=new String(responseBody, "iso8859-1");
+        String result2=new String(responseBody, "iso8859-1");
+        String result3=new String(responseBody, "UTF-8");
         System.out.println(bb + " " + result);
         JSONObject json = JSONObject.parseObject(result);
 

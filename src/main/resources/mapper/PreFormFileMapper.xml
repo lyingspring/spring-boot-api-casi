@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.PreFormFileMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.PreFormFile">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="UNID" jdbcType="VARCHAR" property="unid" />
+    <result column="PROJID" jdbcType="VARCHAR" property="projid" />
+    <result column="BELONGTO" jdbcType="VARCHAR" property="belongto" />
+    <result column="TYPE" jdbcType="VARCHAR" property="type" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="FILEPATH" jdbcType="VARCHAR" property="filepath" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+    <result column="BELONGSYSTEM" jdbcType="VARCHAR" property="belongsystem" />
+    <result column="CREATE_TIME" jdbcType="VARCHAR" property="createTime" />
+    <result column="SYNC_STATUS" jdbcType="VARCHAR" property="syncStatus" />
+    <result column="DATAVERSION" jdbcType="DECIMAL" property="dataversion" />
+    <result column="FILEPWD" jdbcType="VARCHAR" property="filepwd" />
+    <result column="TAKETYPE" jdbcType="VARCHAR" property="taketype" />
+    <result column="ISTAKE" jdbcType="VARCHAR" property="istake" />
+    <result column="ATTRNAME" jdbcType="VARCHAR" property="attrname" />
+    <result column="CONTENT" jdbcType="BLOB" property="content" />
+    <result column="EXTEND" jdbcType="CLOB" property="extend" />
+  </resultMap>
+</mapper>

@@ -59,311 +59,356 @@ public class shijiekouDemo {
 
         //System.out.println(DcryptUtils.verify(request,sign));//验证
        // System.out.println(DcryptUtils.decryptByPublicKey(request));
-        System.out.println(post(url,parts));
+        //System.out.println(post(url,parts));
         sendxunfei();//讯飞
        // System.out.println(DcryptUtils.decryptByPublicKey(request));
     }
 
     public static void sendxunfei(){
         String url="http://59.202.58.195:8000/ESBWeb/servlets/33.1111.zjhz.smzx.ycsl.register.SynReq@1.0";//讯飞 分发
-
+        url="http://59.202.58.195:8000/ESBWeb/servlets/33.1111.zjhz.smzx.ycsl.accept.SynReq@1.0";//受理
         JSONObject json = new JSONObject();
 
-        json.put("baseInfoXml","<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\n" +
-                "<RECORD>\\n  \n" +
-                "    <CALLINFO>\\n    \n" +
-                "        <CALLER>杭州市一窗受理平台</CALLER>\\n    \n" +
-                "        <CALLTIME>2017-09-11 10:11:25</CALLTIME>\\n    \n" +
-                "        <CALLBACK_URL>http://10.54.19.68:8800/yzt</CALLBACK_URL>\\n    \n" +
-                "        <ISSUE>33010000000001</ISSUE>\\n  \n" +
-                "    </CALLINFO>\\n  \n" +
-                "    <PROJID>330111050170909000009</PROJID>\\n  \n" +
-                "    <PROJPWD>415183</PROJPWD>\\n  \n" +
-                "    <IS_MANUBRIUM>2</IS_MANUBRIUM>\\n  \n" +
-                "    <SERVICECODE>020005</SERVICECODE>\\n  \n" +
-                "    <SERVICE_DEPTID>89559628-38a7-491c-8b16-27185f3e2176</SERVICE_DEPTID>\\n  \n" +
-                "    <BUS_MODE>00</BUS_MODE>\\n  \n" +
-                "    <BUS_MODE_DESC></BUS_MODE_DESC>\\n  \n" +
-                "    <SERVICEVERSION>1</SERVICEVERSION>\\n  \n" +
-                "    <SERVICENAME>公共场所卫生许可</SERVICENAME>\\n  \n" +
-                "    <PROJECTNAME>公共场所卫生许可</PROJECTNAME>\\n  \n" +
-                "    <INFOTYPE>承诺件</INFOTYPE>\\n  \n" +
-                "    <BUS_TYPE>0</BUS_TYPE>\\n  \n" +
-                "    <REL_BUS_ID></REL_BUS_ID>\\n  \n" +
-                "    <APPLYNAME>杭州归档电子商务有限公司</APPLYNAME>\\n  \n" +
-                "    <APPLY_CARDTYPE>1</APPLY_CARDTYPE>\\n  \n" +
-                "    <APPLY_CARDNUMBER>91330102MA28NBU477</APPLY_CARDNUMBER>\\n  \n" +
-                "    <CONTACTMAN>刘志强</CONTACTMAN>\\n  \n" +
-                "    <CONTACTMAN_CARDTYPE></CONTACTMAN_CARDTYPE>\\n  \n" +
-                "    <CONTACTMAN_CARDNUMBER>34082519900124151X</CONTACTMAN_CARDNUMBER>\\n  \n" +
-                "    <TELPHONE>18010873024</TELPHONE>\\n  \n" +
-                "    <POSTCODE></POSTCODE>\\n  \n" +
-                "    <ADDRESS></ADDRESS>\\n  \n" +
-                "    <LEGALMAN>朱鹏飞</LEGALMAN>\\n  \n" +
-                "    <DEPTID>89559628-38a7-491c-8b16-27185f3e2176</DEPTID>\\n  \n" +
-                "    <DEPTNAME>桐庐县卫生和计划生育局</DEPTNAME>\\n  \n" +
-                "    <APPLYFROM>1</APPLYFROM>\\n  \n" +
-                "    <APPROVE_TYPE>01</APPROVE_TYPE>\\n  \n" +
-                "    <APPLY_PROPERTIY>99</APPLY_PROPERTIY>\\n  \n" +
-                "    <RECEIVETIME>2017-09-09 16:54:52</RECEIVETIME>\\n  \n" +
-                "    <BELONGTO></BELONGTO>\\n  \n" +
-                "    <AREACODE>330122</AREACODE>\\n  \n" +
-                "    <DATASTATE>1</DATASTATE>\\n  \n" +
-                "    <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n  \n" +
-                "    <EXTEND></EXTEND>\\n  \n" +
-                "    <DATAVERSION>1</DATAVERSION>\\n  \n" +
-                "    <SYNC_STATUS>I</SYNC_STATUS>\\n  \n" +
-                "    <RECEIVE_USEID>LZQ16868</RECEIVE_USEID>\\n  \n" +
-                "    <RECEIVE_NAME>刘志强</RECEIVE_NAME>\\n  \n" +
-                "    <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n  \n" +
-                "    <SS_ORGCODE>89559628-38a7-491c-8b16-27185f3e2176</SS_ORGCODE>\\n  \n" +
-                "    <MEMO></MEMO>\\n  \n" +
-                "    <FZBS>15049465467211345</FZBS>\\n\n" +
+        json.put("baseInfoXml","<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<RECORD>  \n" +
+                "    <CALLINFO>    \n" +
+                "        <CALLER>杭州市一窗受理平台</CALLER>    \n" +
+                "        <CALLTIME>2017-09-11 10:11:25</CALLTIME>    \n" +
+                "        <CALLBACK_URL>http://10.54.19.68:8800/yzt</CALLBACK_URL>    \n" +
+                "        <ISSUE>33010000000001</ISSUE>  \n" +
+                "    </CALLINFO>  \n" +
+                "    <PROJID>330111050170909000009</PROJID>  \n" +
+                "    <PROJPWD>415183</PROJPWD>  \n" +
+                "    <IS_MANUBRIUM>2</IS_MANUBRIUM>  \n" +
+                "    <SERVICECODE>020005</SERVICECODE>  \n" +
+                "    <SERVICE_DEPTID>89559628-38a7-491c-8b16-27185f3e2176</SERVICE_DEPTID>  \n" +
+                "    <BUS_MODE>00</BUS_MODE>  \n" +
+                "    <BUS_MODE_DESC></BUS_MODE_DESC>  \n" +
+                "    <SERVICEVERSION>1</SERVICEVERSION>  \n" +
+                "    <SERVICENAME>公共场所卫生许可</SERVICENAME>  \n" +
+                "    <PROJECTNAME>公共场所卫生许可</PROJECTNAME>  \n" +
+                "    <INFOTYPE>承诺件</INFOTYPE>  \n" +
+                "    <BUS_TYPE>0</BUS_TYPE>  \n" +
+                "    <REL_BUS_ID></REL_BUS_ID>  \n" +
+                "    <APPLYNAME>杭州归档电子商务有限公司</APPLYNAME>  \n" +
+                "    <APPLY_CARDTYPE>1</APPLY_CARDTYPE>  \n" +
+                "    <APPLY_CARDNUMBER>91330102MA28NBU477</APPLY_CARDNUMBER>  \n" +
+                "    <CONTACTMAN>刘志强</CONTACTMAN>  \n" +
+                "    <CONTACTMAN_CARDTYPE></CONTACTMAN_CARDTYPE>  \n" +
+                "    <CONTACTMAN_CARDNUMBER>34082519900124151X</CONTACTMAN_CARDNUMBER>  \n" +
+                "    <TELPHONE>18010873024</TELPHONE>  \n" +
+                "    <POSTCODE></POSTCODE>  \n" +
+                "    <ADDRESS></ADDRESS>  \n" +
+                "    <LEGALMAN>朱鹏飞</LEGALMAN>  \n" +
+                "    <DEPTID>89559628-38a7-491c-8b16-27185f3e2176</DEPTID>  \n" +
+                "    <DEPTNAME>桐庐县卫生和计划生育局</DEPTNAME>  \n" +
+                "    <APPLYFROM>1</APPLYFROM>  \n" +
+                "    <APPROVE_TYPE>01</APPROVE_TYPE>  \n" +
+                "    <APPLY_PROPERTIY>99</APPLY_PROPERTIY>  \n" +
+                "    <RECEIVETIME>2017-09-09 16:54:52</RECEIVETIME>  \n" +
+                "    <BELONGTO></BELONGTO>  \n" +
+                "    <AREACODE>330122</AREACODE>  \n" +
+                "    <DATASTATE>1</DATASTATE>  \n" +
+                "    <BELONGSYSTEM>33000099004</BELONGSYSTEM>  \n" +
+                "    <EXTEND></EXTEND>  \n" +
+                "    <DATAVERSION>1</DATAVERSION>  \n" +
+                "    <SYNC_STATUS>I</SYNC_STATUS>  \n" +
+                "    <RECEIVE_USEID>LZQ16868</RECEIVE_USEID>  \n" +
+                "    <RECEIVE_NAME>刘志强</RECEIVE_NAME>  \n" +
+                "    <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>  \n" +
+                "    <SS_ORGCODE>89559628-38a7-491c-8b16-27185f3e2176</SS_ORGCODE>  \n" +
+                "    <MEMO></MEMO>  \n" +
+                "    <FZBS>15049465467211345</FZBS>\n" +
                 "</RECORD>");
-        json.put("attrXml","<?xml version=\\\"1.0\\\" encoding=\\\"utf-8\\\"?>\n" +
-                "<RECORDS>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94a5a0849</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>法定代表人或负责人身份证明</ATTRNAME>\\n    \n" +
-                "        <SORTID>2</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>c4fee352-d507-40a1-8d54-8b3a6f34a6ab</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>1119493639_1472709631096_title0h.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_ChBeBLdRVOy</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94ab7084c</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>公共场所地址方位示意图、平面图和卫生设施平面布局图</ATTRNAME>\\n    \n" +
-                "        <SORTID>3</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>f43b0984-5a78-40f2-ab17-b3f267d97709</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_sfdjqQ4Ws0H</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94b2e084f</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>具有资质的检测机构出具的公共场所卫生检测或者评价报告</ATTRNAME>\\n    \n" +
-                "        <SORTID>4</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>03f7ab5e-eaa4-476f-a3bb-937afce87fba</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>20160102114555_514.JPG</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_dAXPNyw44sX</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94b520852</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>公共场所卫生管理制度</ATTRNAME>\\n    \n" +
-                "        <SORTID>5</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>4106c3bf-9df3-4ce0-9d7c-942dabe4b8ea</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_4NIaA1kOKtj</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94b7e0855</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>从业人员名单及健康合格证明</ATTRNAME>\\n    \n" +
-                "        <SORTID>6</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>8b847544-be49-4e2f-b1f4-dbabe233b1f3</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_mHDuTCUl6xO</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94bb40858</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>使用集中空有资质的检测机构出具的集中空调通风系统卫生检测或者评价报告</ATTRNAME>\\n    \n" +
-                "        <SORTID>7</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>14e77e3d-9594-4007-97b7-46e794346154</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_my5CyOdduPA</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94bd9085b</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>委托办理的，提供授权委托书及受委托人身份证明；</ATTRNAME>\\n    \n" +
-                "        <SORTID>8</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>329e0019-9500-4eff-a4c6-bcdfb5bc59ff</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_dG1AmPhuHtu</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94c15085e</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>省级卫生计生行政部门要求提供的其它资料。</ATTRNAME>\\n    \n" +
-                "        <SORTID>9</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>1</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>cd38b647-e778-4401-954f-5ef073507457</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_pQXXeKweeN7</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n  \n" +
-                "    <RECORD>\\n    \n" +
-                "        <UNID>8ab693e65e574aad015e65d94c430861</UNID>\\n    \n" +
-                "        <PROJID>330111050170909000009</PROJID>\\n    \n" +
-                "        <ATTRNAME>工商营业执照</ATTRNAME>\\n    \n" +
-                "        <SORTID>1</SORTID>\\n    \n" +
-                "        <TAKETYPE>附件上传</TAKETYPE>\\n    \n" +
-                "        <ISTAKE>0</ISTAKE>\\n    \n" +
-                "        <AMOUNT>1</AMOUNT>\\n    \n" +
-                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>\\n    \n" +
-                "        <MEMO></MEMO>\\n    \n" +
-                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>\\n    \n" +
-                "        <AREACODE>330122</AREACODE>\\n    \n" +
-                "        <EXTEND></EXTEND>\\n    \n" +
-                "        <DATAVERSION>1</DATAVERSION>\\n    \n" +
-                "        <SYNC_STATUS>I</SYNC_STATUS>\\n    \n" +
-                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>\\n    \n" +
-                "        <ATTRID>a49d49d2-648a-439d-9203-e24766a5b042</ATTRID>\\n    \n" +
-                "        <FILES>\\n      \n" +
-                "            <FILEINFO>\\n        \n" +
-                "                <FILENAME>3.jpg.jpg</FILENAME>\\n        \n" +
-                "                <FILEURL>330111050170909000009_QidcwMJ69lP</FILEURL>\\n        \n" +
-                "                <FILEPWD></FILEPWD>\\n      \n" +
-                "            </FILEINFO>\\n    \n" +
-                "        </FILES>\\n  \n" +
-                "    </RECORD>\\n\n" +
+        json.put("attrXml","<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<RECORDS>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94a5a0849</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>法定代表人或负责人身份证明</ATTRNAME>    \n" +
+                "        <SORTID>2</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>c4fee352-d507-40a1-8d54-8b3a6f34a6ab</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>1119493639_1472709631096_title0h.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_ChBeBLdRVOy</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94ab7084c</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>公共场所地址方位示意图、平面图和卫生设施平面布局图</ATTRNAME>    \n" +
+                "        <SORTID>3</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>f43b0984-5a78-40f2-ab17-b3f267d97709</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_sfdjqQ4Ws0H</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94b2e084f</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>具有资质的检测机构出具的公共场所卫生检测或者评价报告</ATTRNAME>    \n" +
+                "        <SORTID>4</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:52</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>03f7ab5e-eaa4-476f-a3bb-937afce87fba</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>20160102114555_514.JPG</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_dAXPNyw44sX</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94b520852</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>公共场所卫生管理制度</ATTRNAME>    \n" +
+                "        <SORTID>5</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>4106c3bf-9df3-4ce0-9d7c-942dabe4b8ea</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_4NIaA1kOKtj</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94b7e0855</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>从业人员名单及健康合格证明</ATTRNAME>    \n" +
+                "        <SORTID>6</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>8b847544-be49-4e2f-b1f4-dbabe233b1f3</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_mHDuTCUl6xO</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94bb40858</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>使用集中空有资质的检测机构出具的集中空调通风系统卫生检测或者评价报告</ATTRNAME>    \n" +
+                "        <SORTID>7</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>14e77e3d-9594-4007-97b7-46e794346154</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_my5CyOdduPA</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94bd9085b</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>委托办理的，提供授权委托书及受委托人身份证明；</ATTRNAME>    \n" +
+                "        <SORTID>8</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>329e0019-9500-4eff-a4c6-bcdfb5bc59ff</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_dG1AmPhuHtu</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94c15085e</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>省级卫生计生行政部门要求提供的其它资料。</ATTRNAME>    \n" +
+                "        <SORTID>9</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>1</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>cd38b647-e778-4401-954f-5ef073507457</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>a0d0e70c5e61384ca0d64464c0035b1964cbf6f8.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_pQXXeKweeN7</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>  \n" +
+                "    <RECORD>    \n" +
+                "        <UNID>8ab693e65e574aad015e65d94c430861</UNID>    \n" +
+                "        <PROJID>330111050170909000009</PROJID>    \n" +
+                "        <ATTRNAME>工商营业执照</ATTRNAME>    \n" +
+                "        <SORTID>1</SORTID>    \n" +
+                "        <TAKETYPE>附件上传</TAKETYPE>    \n" +
+                "        <ISTAKE>0</ISTAKE>    \n" +
+                "        <AMOUNT>1</AMOUNT>    \n" +
+                "        <TAKETIME>2017-09-09 16:54:53</TAKETIME>    \n" +
+                "        <MEMO></MEMO>    \n" +
+                "        <BELONGSYSTEM>33000099004</BELONGSYSTEM>    \n" +
+                "        <AREACODE>330122</AREACODE>    \n" +
+                "        <EXTEND></EXTEND>    \n" +
+                "        <DATAVERSION>1</DATAVERSION>    \n" +
+                "        <SYNC_STATUS>I</SYNC_STATUS>    \n" +
+                "        <CREATE_TIME>2017-09-11 10:11:25</CREATE_TIME>    \n" +
+                "        <ATTRID>a49d49d2-648a-439d-9203-e24766a5b042</ATTRID>    \n" +
+                "        <FILES>      \n" +
+                "            <FILEINFO>        \n" +
+                "                <FILENAME>3.jpg.jpg</FILENAME>        \n" +
+                "                <FILEURL>330111050170909000009_QidcwMJ69lP</FILEURL>        \n" +
+                "                <FILEPWD></FILEPWD>      \n" +
+                "            </FILEINFO>    \n" +
+                "        </FILES>  \n" +
+                "    </RECORD>\n" +
                 "</RECORDS>");
-        json.put("formXml","");
+        json.put("formXml","<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<RECORDS>  \n" +
+                "    <FormInfo name=\"本许可个性化信息\">    \n" +
+                "        <Item name=\"freplictype\" name_cn=\"法人证件类型\">01</Item>    \n" +
+                "        <Item name=\"hzqh\" name_cn=\"杭州市统一区划\">330122</Item>    \n" +
+                "        <Item name=\"forgnm\" name_cn=\"单位名称\">杭州归档电子商务有限公司</Item>    \n" +
+                "        <Item name=\"faddr\" name_cn=\"经营地址\">浙江省杭州市上城区清波街道清波街道111号</Item>    \n" +
+                "        <Item name=\"frepicno\" name_cn=\"法人证件号码\">330104198809184718</Item>    \n" +
+                "        <Item name=\"frepnm\" name_cn=\"法定代表人\">朱鹏飞</Item>    \n" +
+                "        <Item name=\"yyslx\" name_cn=\"饮用水\">3</Item>    \n" +
+                "        <Item name=\"frespicno\" name_cn=\"负责人证件号码\">34082519900124151X</Item>    \n" +
+                "        <Item name=\"swtrlxdh\" name_cn=\"受委托人联系电话\">0556-4588221</Item>    \n" +
+                "        <Item name=\"forgtel\" name_cn=\"单位电话\">0556-4588221</Item>    \n" +
+                "        <Item name=\"yqbmcl\" name_cn=\"要求保密材料\">无</Item>    \n" +
+                "        <Item name=\"fregtype\" name_cn=\"经济类型\"/>    \n" +
+                "        <Item name=\"fwillcheckcnt\" name_cn=\"应体检人数\">12</Item>    \n" +
+                "        <Item name=\"swtr\" name_cn=\"受委托人\">刘志强</Item>    \n" +
+                "        <Item name=\"freptel\" name_cn=\"法人联系电话\"/>    \n" +
+                "        <Item name=\"cntyyf\" name_cn=\"承诺书\">1</Item>    \n" +
+                "        <Item name=\"jzkttfxt\" name_cn=\"集中空调通风系统\">2</Item>    \n" +
+                "        <Item name=\"fempcnt\" name_cn=\"职工人数\">11</Item>    \n" +
+                "        <Item name=\"zyxm\" name_cn=\"主营项目\">020002</Item>    \n" +
+                "        <Item name=\"fsquare\" name_cn=\"经营面积\">11.00</Item>    \n" +
+                "        <Item name=\"freplictypenm\" name_cn=\"其他\"></Item>    \n" +
+                "        <Item name=\"gsfs\" name_cn=\"集中式供水方式\"></Item>    \n" +
+                "        <Item name=\"jyxm\" name_cn=\"经营项目\">020017</Item>    \n" +
+                "        <Item name=\"fresplictype\" name_cn=\"负责人证号类型\">01</Item>    \n" +
+                "        <Item name=\"fresptel\" name_cn=\"负责人联系电话\">0556-4588221</Item>    \n" +
+                "        <Item name=\"frespnm\" name_cn=\"负责人\">刘志强测试1</Item>    \n" +
+                "        <Item name=\"wsgly\" name_cn=\"卫生管理员\">刘志强</Item>  \n" +
+                "    </FormInfo>\n" +
+                "</RECORDS>");
         json.put("apasPostXml","");
-        json.put("sign","123");
-        json.put("appKey","123");
-        json.put("requestTime","333");
+        json.clear();
+        json.put("acceptInfoXml","<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
+                "<RECORD>\n" +
+                "<PROJID>330901161710248000216</PROJID>\n" +
+                "    <ACCEPT_MAN>叶洁</ACCEPT_MAN>\n" +
+                "<HANDER_DEPTNAME>综合参保服务中心</HANDER_DEPTNAME>\n" +
+                "<HANDER_DEPTID></HANDER_DEPTID>\n" +
+                "<AREACODE>330901</AREACODE>\n" +
+                "    <ACCEPT_TIME>2017-08-03 11:04:29</ACCEPT_TIME>\n" +
+                "<PROMISEVALUE>5</PROMISEVALUE>\n" +
+                "<PROMISETYPE>工作日</PROMISETYPE>\n" +
+                "<PROMISE_ETIME>2017-08-08 11:04:29</PROMISE_ETIME>\n" +
+                "    <BELONGSYSTEM>33090116003</BELONGSYSTEM>\n" +
+                "<EXTEND></EXTEND>\n" +
+                "<DATAVERSION>1</DATAVERSION>\n" +
+                "<SYNC_STATUS>I</SYNC_STATUS>\n" +
+                "    <CREATE_TIME>2017-08-03 11:04:29</CREATE_TIME>\n" +
+                "</RECORD>");
 
 
-        Part[] parts= new Part[7];//讯飞
-        parts[0] = new StringPart("formXml", "","UTF-8");
-        parts[1] = new StringPart("apasPostXml", "","UTF-8");
-        parts[2] = new StringPart("baseInfoXml", json.getString("baseInfoXml"),"UTF-8");
-        parts[3] = new StringPart("attrXml", json.getString("attrXml"),"UTF-8");
-        parts[4] = new StringPart("sign", "123","UTF-8");
-        parts[5] = new StringPart("appKey", "123","UTF-8");
-        parts[6] = new StringPart("requestTime", "123","UTF-8");
-
+//        Part[] parts= new Part[4];//讯飞
+//        parts[0] = new StringPart("formXml", "","UTF-8");
+//        parts[1] = new StringPart("apasPostXml", "","UTF-8");
+//        parts[2] = new StringPart("baseInfoXml", json.getString("baseInfoXml"),"UTF-8");
+//        parts[3] = new StringPart("attrXml", json.getString("attrXml"),"UTF-8");
+        Part[] parts= new Part[2];//讯飞
+        parts[0] = new StringPart("acceptInfoXml", json.getString("acceptInfoXml"),"UTF-8");
+        parts[1] = new StringPart("attrXml", "","UTF-8");
 
         System.out.println(post(url,parts));
     }
