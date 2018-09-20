@@ -2,7 +2,7 @@ package com.company.project.model;
 
 import javax.persistence.*;
 
-@Table(name = "CASI.PRE_FORM_FILE")
+@Table(name = "PRE_FORM_FILE")
 public class PreFormFile {
     @Id
     @Column(name = "UNID")

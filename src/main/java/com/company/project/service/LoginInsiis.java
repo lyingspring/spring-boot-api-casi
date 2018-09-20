@@ -15,8 +15,10 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.methods.multipart.Part;
 import org.apache.commons.httpclient.methods.multipart.StringPart;
 import org.apache.commons.httpclient.params.HttpMethodParams;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.*;
+import java.net.URLEncoder;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -27,26 +29,140 @@ import java.util.HashMap;
 public class LoginInsiis {
     private static String filePath = "d://springBoot_tmp/yzm.png";
     private static String cashcookie = "";
-    private static String insiisUrl = "http://10.255.5.110:8080/insiis";//系统登陆地址
-    private static String host = "10.255.5.110:8080";
-    private static String loginName = "xxk";//登陆用户名
-    private static String passwordMD5 = "e1dedb80775489a50158c94b36af96bb";//MD5加密后的密码
-
+    private static String insiisUrl = "http://10.255.5.100:8090/insiis";//系统登陆地址
+    private static String host = "10.255.5.100:8090";
+    //private static String loginName = "xxk";//登陆用户名
+   // private static String passwordMD5 = "e1dedb80775489a50158c94b36af96bb";//MD5加密后的密码
+    private static String loginName = "admin";//登陆用户名
+    private static String passwordMD5 = "21232f297a57a5a743894a0e4a801fc3";//MD5加密后的密码
     /**
      * @param args
      * @throws Exception
      */
 
     public static void main(String[] args) throws Exception {
-        String cookis = getImage(filePath);
-        String code = getImgContent(filePath);
-        int bb = logonAction(code, cookis);
-        System.out.println("验证码 = " + code + " " + bb);
-
+//        String cookis = getImage(filePath);
+//        String code = getImgContent(filePath);
+//        int bb = logonAction(code, cookis);
+//        System.out.println("验证码 = " + code + " " + bb);
+        System.out.println( doGet("http://10.255.5.11:8080/insiis/com/insigma/siis/local/module/medicalmgmt/patientrelocatedreg/GetHisPatientInfoAction.do?method=getHisPatientInfo&" +
+                "_ODA_TRANSMIT_OBJECT=%7B%22chrDTO%22%3A%7B%22aac001%22%3A108046%2C%22aka083%22%3A%2231%22%2C%22flaglbf%22%3A%22%22%7D%7D","GBK"));
     }
 
     /**
-     * 调用统一入口
+     httpClient的get请求方式2
+     * @return
+     * @throws Exception
+     */
+    public static String doGet(String url, String charset)
+            throws Exception {
+        /*
+         * 使用 GetMethod 来访问一个 URL 对应的网页,实现步骤: 1:生成一个 HttpClinet 对象并设置相应的参数。
+         * 2:生成一个 GetMethod 对象并设置响应的参数。 3:用 HttpClinet 生成的对象来执行 GetMethod 生成的Get
+         * 方法。 4:处理响应状态码。 5:若响应正常，处理 HTTP 响应内容。 6:释放连接。
+         */
+        /* 1 生成 HttpClinet 对象并设置参数 */
+        HttpClient httpClient = new HttpClient();
+        // 设置 Http 连接超时为5秒
+        httpClient.getHttpConnectionManager().getParams().setConnectionTimeout(5000);
+        /* 2 生成 GetMethod 对象并设置参数 */
+        GetMethod getMethod = new GetMethod(url);
+        // 设置 get 请求超时为 5 秒
+        getMethod.getParams().setParameter(HttpMethodParams.SO_TIMEOUT, 5000);
+        // 设置请求重试处理，用的是默认的重试处理：请求三次
+        getMethod.getParams().setParameter(HttpMethodParams.RETRY_HANDLER,	new DefaultHttpMethodRetryHandler());
+        getMethod.setRequestHeader("Cookie", cashcookie);
+
+        String response = "";
+        /* 3 执行 HTTP GET 请求 */
+        try {
+            int statusCode = httpClient.executeMethod(getMethod);
+            /* 4 判断访问的状态码 */
+            if (statusCode != HttpStatus.SC_OK) {
+                System.err.println("请求出错: "+ getMethod.getStatusLine());
+            }
+            /* 5 处理 HTTP 响应内容 */
+            // HTTP响应头部信息，这里简单打印
+            Header[] headers = getMethod.getResponseHeaders();
+            for (Header h : headers)
+                System.out.println(h.getName() + "------------ " + h.getValue());
+            // 读取 HTTP 响应内容，这里简单打印网页内容
+            byte[] responseBody = getMethod.getResponseBody();// 读取为字节数组
+            response = new String(responseBody, charset);
+            System.out.println("----------response:" + response);
+            // 读取为 InputStream，在网页内容数据量大时候推荐使用
+            // InputStream response = getMethod.getResponseBodyAsStream();
+        } catch (HttpException e) {
+            // 发生致命的异常，可能是协议不对或者返回的内容有问题
+            System.out.println("请检查输入的URL!");
+            e.printStackTrace();
+        } catch (IOException e) {
+            // 发生网络异常
+            System.out.println("发生网络异常!");
+            e.printStackTrace();
+        } finally {
+            /* 6 .释放连接 */
+            getMethod.releaseConnection();
+        }
+        return response;
+    }
+
+    /**
+     * get调用统一入口
+     *
+     * @param TradeCode    接口代码
+     * @param TradeCodeMap 交易参数
+     * @return
+     */
+    public static JSONObject returnInsiisGet(String TradeCode,
+                                              HashMap<String, Object> TradeCodeMap) throws Exception {
+        String url = "";
+        try {
+            url = insiisUrl + InsiisActionConfig.configMap.get(TradeCode).toString();//方法URL
+            if (url.equals(insiisUrl)||url.isEmpty()) {
+                throw new ServiceException("读取InsiisActionConfig出错,url为空:" + TradeCode);
+            }
+        } catch (Exception e) {
+            throw new ServiceException("读取InsiisActionConfig出错:" + TradeCode);
+        }
+        String input= JSON.toJSONString(TradeCodeMap) ;
+        JSONObject json = new JSONObject();
+        HashMap<String, Object> map = new HashMap<String, Object>();
+        map = TradeCodeMap;
+        if(url.contains("?")){
+            url=url+"&"+getUrlParamsByMap(map);
+        }else{
+            url=url+"?"+getUrlParamsByMap(map);
+        }
+        String resp= doGet(url,"GBK");
+        json=JSONObject.parseObject(resp);
+        return json;
+    }
+
+    /**
+     * 将map转换成url
+     *
+     * @param map
+     * @return
+     */
+    public static String getUrlParamsByMap(HashMap<String, Object> map) throws UnsupportedEncodingException {
+        if (map == null) {
+            return "";
+        }
+        StringBuffer sb = new StringBuffer();
+        for (String key : map.keySet()) {
+            sb.append(key + "=" +  URLEncoder.encode(map.get(key).toString(),"GBK"));
+            sb.append("&");
+        }
+        String s = sb.toString();
+        if (s.endsWith("&")) {
+            s = StringUtils.substringBeforeLast(s, "&");
+        }
+        return s;
+    }
+
+    /**
+     * post调用统一入口
      *
      * @param TradeCode    接口代码
      * @param aac001       人员ID
@@ -289,7 +405,7 @@ public class LoginInsiis {
                 postMethod.addParameter(key, params.get(key).toString());
             }
         }
-        postMethod.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");//社保系统字符集是GBK
+       postMethod.getParams().setParameter(HttpMethodParams.HTTP_CONTENT_CHARSET, "GBK");//社保系统字符集是GBK
         int bb = httpClient.executeMethod(postMethod);
 
         //开始得到网站返回值
@@ -303,8 +419,11 @@ public class LoginInsiis {
         }
         //转成字符串并以json格式返回页面
         String result = new String(responseBody, "GBK");
-        String result2=new String(responseBody, "iso8859-1");
-        String result3=new String(responseBody, "UTF-8");
+//        String result2=new String(responseBody, "iso8859-1");
+//        String result3=new String(responseBody, "UTF-8");
+
+
+
         System.out.println(bb + " " + result);
         JSONObject json = JSONObject.parseObject(result);
 

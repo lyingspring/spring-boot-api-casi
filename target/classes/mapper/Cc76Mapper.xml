@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.Cc76Mapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.Cc76">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="AAZ308" jdbcType="DECIMAL" property="aaz308" />
+    <result column="AAC001" jdbcType="DECIMAL" property="aac001" />
+    <result column="AAE135" jdbcType="VARCHAR" property="aae135" />
+    <result column="AAC009" jdbcType="VARCHAR" property="aac009" />
+    <result column="AAC011" jdbcType="VARCHAR" property="aac011" />
+    <result column="AAE006" jdbcType="VARCHAR" property="aae006" />
+    <result column="EAC101" jdbcType="VARCHAR" property="eac101" />
+    <result column="GZDD" jdbcType="VARCHAR" property="gzdd" />
+    <result column="BDC033" jdbcType="VARCHAR" property="bdc033" />
+    <result column="PROJID" jdbcType="VARCHAR" property="projid" />
+    <result column="AAE036" jdbcType="TIMESTAMP" property="aae036" />
+    <result column="AAE013" jdbcType="VARCHAR" property="aae013" />
+    <result column="FLAG" jdbcType="VARCHAR" property="flag" />
+  </resultMap>
+</mapper>

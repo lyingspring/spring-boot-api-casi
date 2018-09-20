@@ -2,7 +2,7 @@ package com.company.project.model;
 
 import javax.persistence.*;
 
-@Table(name = "CASI.PRE_JFJLCOMMFORM")
+@Table(name = "PRE_JFJLCOMMFORM")
 public class PreJfjlcommform {
     @Id
     @Column(name = "UNID")

@@ -185,6 +185,13 @@ public class CasiAPIController {
         dlog.setTransid(dlog.getSno() + "_" + map.get("TradeCode").toString());
         dlog.setItradetype(map.get("TradeCode").toString());
         dlog.setVarin(JSON.toJSONString(map));
+        if(map.get("APPLYFROM")!=null&&!map.get("APPLYFROM").toString().equals("")){
+            dlog.setSendnodecode(map.get("APPLYFROM").toString());//数据来源 1内网 2外网 3一体机 4 app 5一窗
+
+        }
+        if(map.get("Projid")!=null&&!map.get("Projid").toString().equals("")){
+            dlog.setSendcode(map.get("Projid").toString());//申报号
+        }
         DLogService.save(dlog);//插入日志
         try {
             if (map.get("TradeCode").toString().equals("6001")) {//转出验证
@@ -222,6 +229,21 @@ public class CasiAPIController {
             }
             if (map.get("TradeCode").toString().equals("6012")) {//医保家庭共济
                 obj = ds.trade6012(map);
+            }
+            if (map.get("TradeCode").toString().equals("6013")) {//异地备案校验
+                obj = ds.trade6013(map);
+            }
+            if (map.get("TradeCode").toString().equals("6014")) {//异地备案校验
+                obj = ds.trade6014(map);
+            }
+            if (map.get("TradeCode").toString().equals("6015")) {//异地备案校验
+                obj = ds.trade6015(map);
+            }
+            if (map.get("TradeCode").toString().equals("6016")) {//灵活就业校验
+                obj = ds.trade6016(map);
+            }
+            if (map.get("TradeCode").toString().equals("6017")) {//灵活就业登记
+                obj = ds.trade6017(map);
             }
             if (map.get("TradeCode").toString().equals("6032")) {//通过AAC001人员基本信息查询(人员搜索框)
                 obj = ds.trade6032(map);

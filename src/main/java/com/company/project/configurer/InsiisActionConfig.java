@@ -35,6 +35,10 @@ public class InsiisActionConfig implements ApplicationRunner {
         configMap.put("functionid6008S","5a3cb6d007b5920e26c4f439fa14037f");//模块编码
         configMap.put("6010","/com/insigma/siis/local/module/insuredmgmt/personinsurereg/SaveAction.do?method=save");//方法路径
         configMap.put("functionid6010","6985a6b56291127c47ff4e3e65e58eb8");//模块编码
+        configMap.put("6013","/com/insigma/siis/local/module/medicalmgmt/patientrelocatedreg/GetHisPatientInfoAction.do?method=getHisPatientInfo");//方法路径
+        configMap.put("functionid6013","NULL");//模块编码
+        configMap.put("6014","/com/insigma/siis/local/module/medicalmgmt/patientrelocatedreg/DoSaveAction.do?method=doSave");//方法路径
+        configMap.put("functionid6014","4028c72016cc598e0116cc758d0f0002");//模块编码
 
     }
 }

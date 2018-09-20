@@ -2,7 +2,7 @@ package com.company.project.model;
 
 import javax.persistence.*;
 
-@Table(name = "CASI.AC01")
+@Table(name = "AC01")
 public class Ac01 {
     @Id
     @Column(name = "AAC001")

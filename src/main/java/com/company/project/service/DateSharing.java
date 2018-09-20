@@ -11,6 +11,7 @@ import com.company.project.dao.HnsiAPIMapper;
 import com.company.project.dao.PublicMapper;
 import com.company.project.model.Ab51;
 import com.company.project.model.Ac01;
+import com.company.project.model.Cc76;
 import com.company.project.model.Ka27;
 import org.apache.commons.httpclient.util.DateUtil;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -36,6 +37,8 @@ public class DateSharing {
     private Ab51Service ab51Service;
     @Resource
     private Ka27Service ka27Service;
+    @Resource
+    private Cc76Service cc76Service;
     @Resource
     private DataSharingMapper dataSharingMapper;
     @Resource
@@ -859,38 +862,42 @@ public class DateSharing {
             throw new ServiceException("女性50周岁以上不能参保");//普通人员
         }
         mapSql.clear();
-        mapSql.put("SQL", "select round(round((select max(eaa023)\n" +
-                "                      from aa02\n" +
-                "                     where eaa022 = '941'\n" +
-                "                       and to_char(sysdate, 'yyyymm') >= eaa021\n" +
-                "                       and eaa021 =\n" +
-                "                           (select max(eaa021)\n" +
-                "                              from aa02\n" +
-                "                             where eaa022 = '941'\n" +
-                "                               and to_char(sysdate, 'yyyymm') >= eaa021)) * 0.8) *\n" +
-                "             (select aaa041 + aaa042\n" +
-                "                from aa05 t\n" +
-                "               where aae140 = '10'\n" +
-                "                 and aaz289 = 1003),\n" +
-                "             2) ylje,\n" +
-                "       round(round((select max(eaa023)\n" +
-                "                     from aa02\n" +
-                "                    where eaa022 = '941'\n" +
-                "                      and to_char(sysdate, 'yyyymm') >= eaa021\n" +
-                "                      and eaa021 =\n" +
-                "                          (select max(eaa021)\n" +
-                "                             from aa02\n" +
-                "                            where eaa022 = '941'\n" +
-                "                              and to_char(sysdate, 'yyyymm') >= eaa021))) *\n" +
-                "             (select aaa041 + aaa042\n" +
-                "                from aa05 t\n" +
-                "               where aae140 = '20'\n" +
-                "                 and aaz289 = 2005),\n" +
-                "             2) ybje,\n" +
-                "       (select eaa007\n" +
-                "          from aa05 t\n" +
-                "         where aae140 = '21'\n" +
-                "           and aaz289 = 2101) dbje\n" +
+        mapSql.put("SQL", "SELECT round((select max(eaa023)\n" +
+                "                from aa02\n" +
+                "               where eaa022 = '941'\n" +
+                "                 and to_char(sysdate, 'yyyymm') >= eaa021\n" +
+                "                 and eaa021 =\n" +
+                "                     (select max(eaa021)\n" +
+                "                        from aa02\n" +
+                "                       where eaa022 = '941'\n" +
+                "                         and to_char(sysdate, 'yyyymm') >= eaa021)) * 0.8) yl80,\n" +
+                "       round((select max(eaa023)\n" +
+                "                from aa02\n" +
+                "               where eaa022 = '941'\n" +
+                "                 and to_char(sysdate, 'yyyymm') >= eaa021\n" +
+                "                 and eaa021 =\n" +
+                "                     (select max(eaa021)\n" +
+                "                        from aa02\n" +
+                "                       where eaa022 = '941'\n" +
+                "                         and to_char(sysdate, 'yyyymm') >= eaa021)) * 1) yl100,\n" +
+                "       round((select max(eaa023)\n" +
+                "                from aa02\n" +
+                "               where eaa022 = '941'\n" +
+                "                 and to_char(sysdate, 'yyyymm') >= eaa021\n" +
+                "                 and eaa021 =\n" +
+                "                     (select max(eaa021)\n" +
+                "                        from aa02\n" +
+                "                       where eaa022 = '941'\n" +
+                "                         and to_char(sysdate, 'yyyymm') >= eaa021)) * 2) yl200,\n" +
+                "       round((select max(eaa023)\n" +
+                "                from aa02\n" +
+                "               where eaa022 = '941'\n" +
+                "                 and to_char(sysdate, 'yyyymm') >= eaa021\n" +
+                "                 and eaa021 =\n" +
+                "                     (select max(eaa021)\n" +
+                "                        from aa02\n" +
+                "                       where eaa022 = '941'\n" +
+                "                         and to_char(sysdate, 'yyyymm') >= eaa021)) * 3) yl300\n" +
                 "  from dual\n");
         List<HashMap<String, Object>> listzjje = dataSharingMapper.commQuery(mapSql);
 
@@ -898,18 +905,23 @@ public class DateSharing {
         JSONObject aa05json1 = new JSONObject();
         aa05json1.put("ZJID", "1003");
         aa05json1.put("ZJMC", "个体养老80%");
-        aa05json1.put("JFJE", listzjje.get(0).get("YLJE").toString());
+        aa05json1.put("JFJS", listzjje.get(0).get("YL80").toString());
         aa05array.add(aa05json1);
         JSONObject aa05json2 = new JSONObject();
-        aa05json2.put("ZJID", "2005");
-        aa05json2.put("ZJMC", "个体医保");
-        aa05json2.put("JFJE", listzjje.get(0).get("YBJE").toString());
+        aa05json2.put("ZJID", "1004");
+        aa05json2.put("ZJMC", "个体养老100%");
+        aa05json2.put("JFJS", listzjje.get(0).get("YL100").toString());
         aa05array.add(aa05json2);
         JSONObject aa05json3 = new JSONObject();
-        aa05json3.put("ZJID", "2101");
-        aa05json3.put("ZJMC", "大病补助");
-        aa05json3.put("JFJE", listzjje.get(0).get("DBJE").toString());
+        aa05json3.put("ZJID", "1005");
+        aa05json3.put("ZJMC", "个体养老200%");
+        aa05json3.put("JFJS", listzjje.get(0).get("YL200").toString());
         aa05array.add(aa05json3);
+        JSONObject aa05json4 = new JSONObject();
+        aa05json4.put("ZJID", "1006");
+        aa05json4.put("ZJMC", "个体养老300%");
+        aa05json4.put("JFJS", listzjje.get(0).get("YL300").toString());
+        aa05array.add(aa05json4);
 
         if (aac001.equals(0l)) {//系统不存在则取公安数据
             json.put("AAC003", GAinfo.get(0).get("XM").toString());//姓名
@@ -968,8 +980,8 @@ public class DateSharing {
             map.get("PHONE").toString();
             map.get("XZ").toString();
             map.get("SQ").toString();
-
-
+            map.get("JFJS").toString();//养老缴费基数
+            map.get("ZJID").toString();//养老缴费ID
         } catch (Exception e) {
             throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
         }
@@ -1074,7 +1086,7 @@ public class DateSharing {
                 "                             where eaa022 = '941'\n" +
                 "                               and to_char(sysdate, 'yyyymm') >= eaa021)) yb from dual ");
         List<HashMap<String, Object>> listaic020 = dataSharingMapper.commQuery(mapSql);
-        qyaic020 = listaic020.get(0).get("QY").toString();
+        qyaic020 = map.get("JFJS").toString();
         ybaic020 = listaic020.get(0).get("YB").toString();
 
         map1.put("list2Data", "[{\"aaa027\":\"330127\",\"aaa041\":0.08,\"aaa042\":0.1,\"aab001\":\"\",\"aab004\":\"\"," +
@@ -1146,48 +1158,49 @@ public class DateSharing {
 
         Long aac001 = queryPerson(map.get("AAE135").toString(), null);
         Long aac001_s = queryPerson(map.get("AAE135_S").toString(), null);
-        if(aac001.equals(0L)||aac001_s.equals(0L)){
+        if (aac001.equals(0L) || aac001_s.equals(0L)) {
             throw new ServiceException("人员基本信息不存在!");
         }
 
 
         Map<String, String> mapSql = new HashMap<>();
         mapSql.clear();
-        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001+" and aae140='20' and aae100='1' and " +
+        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001 + " and aae140='20' and aae100='1' and " +
                 "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
         List listkc51 = dataSharingMapper.commQuery(mapSql);
-        if(listkc51.size()==0){
+        if (listkc51.size() == 0) {
             throw new ServiceException("授权人职工医保未正常享受!");
         }
         mapSql.clear();
-        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001_s+"  and aae100='1' and " +
+        mapSql.put("SQL", "select 1 from kc51 where aac001=" + aac001_s + "  and aae100='1' and " +
                 "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
         List listkc51_s = dataSharingMapper.commQuery(mapSql);
-        if(listkc51_s.size()==0){
+        if (listkc51_s.size() == 0) {
             throw new ServiceException("被授权人医保未正常享受!");
         }
         mapSql.clear();
-        mapSql.put("SQL", "select 1 from ka27 where aac001=" + aac001_s+"  and aae100='1' and " +
+        mapSql.put("SQL", "select 1 from ka27 where aac001=" + aac001_s + "  and aae100='1' and " +
                 "to_char(sysdate,'yyyymmdd') >=aae030 and (to_char(sysdate,'yyyymmdd')<=aae031 or aae031 is null)");
         List listka27 = dataSharingMapper.commQuery(mapSql);
-        if(listka27.size()>0){
+        if (listka27.size() > 0) {
             throw new ServiceException("被授权人已经有绑定记录!");
         }
-        Ac01 ac01=new Ac01();
-        ac01=ac01Service1.findBy("aac001",aac001);
-        Ac01 ac01_s=new Ac01();
-        ac01_s=ac01Service1.findBy("aac001",aac001_s);
+        Ac01 ac01 = new Ac01();
+        ac01 = ac01Service1.findBy("aac001", aac001);
+        Ac01 ac01_s = new Ac01();
+        ac01_s = ac01Service1.findBy("aac001", aac001_s);
 
 
         JSONObject json = new JSONObject();
-        json.put("AAE135",ac01.getAae135());
-        json.put("AAC003",ac01.getAac003());
-        json.put("AAC001",ac01.getAac001());
-        json.put("AAE135_S",ac01_s.getAae135());
-        json.put("AAC003_S",ac01_s.getAac003());
-        json.put("AAC001_S",ac01_s.getAac001());
+        json.put("AAE135", ac01.getAae135());
+        json.put("AAC003", ac01.getAac003());
+        json.put("AAC001", ac01.getAac001());
+        json.put("AAE135_S", ac01_s.getAae135());
+        json.put("AAC003_S", ac01_s.getAac003());
+        json.put("AAC001_S", ac01_s.getAac001());
         return json;
     }
+
     /**
      * 家庭共济
      *
@@ -1208,11 +1221,11 @@ public class DateSharing {
         HashMap<String, Object> map1 = new HashMap<String, Object>();
         map1.putAll(map);
         trade6011(map1);
-        Ac01 ac01=new Ac01();
-        ac01=ac01Service1.findBy("aac001",Long.valueOf(map.get("AAC001").toString()));
-        Ac01 ac01_s=new Ac01();
-        ac01_s=ac01Service1.findBy("aac001",Long.valueOf(map.get("AAC001_S").toString()));
-        Ka27 ka27=new Ka27();
+        Ac01 ac01 = new Ac01();
+        ac01 = ac01Service1.findBy("aac001", Long.valueOf(map.get("AAC001").toString()));
+        Ac01 ac01_s = new Ac01();
+        ac01_s = ac01Service1.findBy("aac001", Long.valueOf(map.get("AAC001_S").toString()));
+        Ka27 ka27 = new Ka27();
         ka27.setAac001(ac01_s.getAac001());
         ka27.setAac001S(ac01.getAac001());
         ka27.setAka027(publicMapper.querySequenceByParam("ssim.sq_aka027"));
@@ -1227,14 +1240,316 @@ public class DateSharing {
         ka27.setAac003S(ac01.getAac003());
         ka27Service.save(ka27);
         JSONObject json = new JSONObject();
-        json.put("AAE135",ac01.getAae135());
-        json.put("AAC003",ac01.getAac003());
-        json.put("AAC001",ac01.getAac001());
-        json.put("AAE135_S",ac01_s.getAae135());
-        json.put("AAC003_S",ac01_s.getAac003());
-        json.put("AAC001_S",ac01_s.getAac001());
+        json.put("AAE135", ac01.getAae135());
+        json.put("AAC003", ac01.getAac003());
+        json.put("AAC001", ac01.getAac001());
+        json.put("AAE135_S", ac01_s.getAae135());
+        json.put("AAC003_S", ac01_s.getAac003());
+        json.put("AAC001_S", ac01_s.getAac001());
         return json;
     }
+
+    /**
+     * 常住异地备案校验
+     *
+     * @param map
+     * @return
+     */
+    public JSONObject trade6013(Map<String, Object> map) throws Exception {
+        try {
+            map.get("AAE135").toString();//身份证
+
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        Long aac001 = queryPerson(map.get("AAE135").toString(), null);
+        HashMap<String, Object> map1 = new HashMap<String, Object>();
+        map1.putAll(map);
+        map1.put("_ODA_TRANSMIT_OBJECT", "{\"chrDTO\":{\"aac001\":" + aac001 + ",\"aka083\":\"31\",\"flaglbf\":\"\"}}");
+        JSONObject json = LoginInsiis.returnInsiisGet("6013", map1);
+        if (!json.get("mainMessage").toString().equals("ok")) {
+            throw new ServiceException("社保系统返回出错！");
+        }
+        json = JSONObject.parseObject(json.get("data").toString());
+        if (json.get("flag").toString().equals("-1")) {
+            throw new ServiceException("该人员当前时间不享受医疗待遇！");
+        }
+
+        json.clear();
+        json.put("AAC001", aac001);
+        json.put("AAE135", map.get("AAE135").toString());
+
+        return json;
+    }
+
+    /**
+     * 常住异地备案
+     *
+     * @param map
+     * @return
+     * @throws IOException
+     */
+    public JSONObject trade6014(Map<String, Object> map) throws IOException {
+        String PHONE_NUMBER_REG = "^(13[0-9]|14[579]|15[0-3,5-9]|16[6]|17[0135678]|18[0-9]|19[89])\\d{8}$";//手机号码正则
+        try {
+            map.get("AAC001").toString();
+            map.get("AAE135").toString();
+            map.get("JSXM").toString();//家属姓名
+            map.get("STARTDATE").toString();//开始时间 yyyymmdd
+            map.get("PHONE").toString();//联系手机
+            map.get("CITY").toString();//市
+            map.get("PROVINCE").toString();//省
+            map.get("ADDR").toString();//地址
+            map.get("JSGX").toString();//与本人关系
+            map.get("DDJG1").toString();//定点机构1
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        HashMap<String, Object> map1 = new HashMap<String, Object>();
+        map1.put("akb021_1", "");
+        map1.put("akb0201", "");
+        map1.put("akb021_2", "");
+        map1.put("akb0202", "");
+        map1.put("akb021_3", "");
+        map1.put("akb0203", "");
+        map1.put("akb021_4", "");
+        map1.put("akb0204", "");
+        Map<String, String> mapSql = new HashMap<>();
+        mapSql.clear();
+        mapSql.put("SQL", "select aae044,akb020 from kb01  where aae100='1' and  aae044 like'%" + map.get("DDJG1").toString() + "%'");
+        List<HashMap<String, Object>> listkb011 = dataSharingMapper.commQuery(mapSql);
+        if (listkb011.size() != 1) {
+            int j = 0;
+            for (int i = 0; i < listkb011.size(); i++) {
+                if (listkb011.get(i).get("AAE044").toString().equals(map.get("DDJG1").toString())) {
+                    map1.put("akb021_1", listkb011.get(i).get("AAE044").toString());
+                    map1.put("akb0201", listkb011.get(i).get("AKB020").toString());
+                    j++;
+                }
+            }
+            if (j == 0) {
+                throw new ServiceException("对不起系统中找不到" + map.get("DDJG1").toString() + "对应的医疗机构,请尽量完整的输入机构名称！");
+            }
+        } else {
+            map1.put("akb021_1", listkb011.get(0).get("AAE044").toString());
+            map1.put("akb0201", listkb011.get(0).get("AKB020").toString());
+        }
+
+        if (map.get("DDJG2") != null && !map.get("DDJG2").toString().isEmpty()) {
+            mapSql.clear();
+            mapSql.put("SQL", "select aae044,akb020 from kb01  where aae100='1' and  aae044 like'%" + map.get("DDJG2").toString() + "%'");
+            List<HashMap<String, Object>> listkb012 = dataSharingMapper.commQuery(mapSql);
+            if (listkb012.size() != 1) {
+                int j = 0;
+                for (int i = 0; i < listkb012.size(); i++) {
+                    if (listkb012.get(i).get("AAE044").toString().equals(map.get("DDJG2").toString())) {
+                        map1.put("akb021_2", listkb012.get(i).get("AAE044").toString());
+                        map1.put("akb0202", listkb012.get(i).get("AKB020").toString());
+                        j++;
+                    }
+                }
+                if (j == 0) {
+                    throw new ServiceException("对不起系统中找不到" + map.get("DDJG2").toString() + "对应的医疗机构,请尽量完整的输入机构名称！");
+                }
+            } else {
+                map1.put("akb021_2", listkb012.get(0).get("AAE044").toString());
+                map1.put("akb0202", listkb012.get(0).get("AKB020").toString());
+            }
+        }
+        if (map.get("DDJG3") != null && !map.get("DDJG3").toString().isEmpty()) {
+            mapSql.clear();
+            mapSql.put("SQL", "select aae044,akb020 from kb01  where aae100='1' and  aae044 like'%" + map.get("DDJG3").toString() + "%'");
+            List<HashMap<String, Object>> listkb013 = dataSharingMapper.commQuery(mapSql);
+            if (listkb013.size() != 1) {
+                int j = 0;
+                for (int i = 0; i < listkb013.size(); i++) {
+                    if (listkb013.get(i).get("AAE044").toString().equals(map.get("DDJG3").toString())) {
+                        map1.put("akb021_3", listkb013.get(i).get("AAE044").toString());
+                        map1.put("akb0203", listkb013.get(i).get("AKB020").toString());
+                        j++;
+                    }
+                }
+                if (j == 0) {
+                    throw new ServiceException("对不起系统中找不到" + map.get("DDJG3").toString() + "对应的医疗机构,请尽量完整的输入机构名称！");
+                }
+            } else {
+                map1.put("akb021_3", listkb013.get(0).get("AAE044").toString());
+                map1.put("akb0203", listkb013.get(0).get("AKB020").toString());
+            }
+        }
+        mapSql.clear();
+        mapSql.put("SQL", "select 1 from kc41 t where aka083='31' and '" + map.get("STARTDATE").toString() + "' <= aae031 and aac001=" + map.get("AAC001").toString());
+        List listkc41 = dataSharingMapper.commQuery(mapSql);
+        if (listkc41.size() > 0) {
+            throw new ServiceException("此段时间已存在登记记录");
+        }
+        String now_date = DateFormatUtils.format(publicMapper.queryDBdate(), "yyyyMM");
+        if (Long.valueOf(map.get("STARTDATE").toString()) <= Long.valueOf(now_date + "31")) {
+            throw new ServiceException("开始时间必须大于当前月！");
+        }
+        map1.put("aae030", map.get("STARTDATE").toString().substring(0,4)+"-"+map.get("STARTDATE").toString().substring(4,6)
+                +"-"+map.get("STARTDATE").toString().substring(6,8));
+        if( map.get("ENDDATE")!=null&&!map.get("ENDDATE").toString().equals("")) {
+            map1.put("aae031", map.get("ENDDATE").toString().substring(0,4)+"-"+map.get("ENDDATE").toString().substring(4,6)
+                    +"-"+map.get("ENDDATE").toString().substring(6,8));
+        }
+        if (map.get("AAE007") != null) {
+            map1.put("aae007", map.get("AAE007").toString());
+        }
+        map1.put("eae055", map.get("PROVINCE").toString());//省
+        map1.put("aaa170", map.get("CITY").toString());//市
+        map1.put("aae006", map.get("ADDR").toString());//地址
+        map1.put("ake004_1", map.get("JSXM").toString());//家属姓名
+        map1.put("ake005_1", map.get("PHONE").toString());//手机
+        map1.put("gx1", map.get("JSGX").toString());//关系
+        map1.put("aka083", "31");//
+        map1.put("aac001", map.get("AAC001").toString());//
+        map1.put("flag", "2");//
+        map1.put("ake004_2", "");//家属姓名
+        map1.put("ake005_2", "");//手机
+        map1.put("ake004_3", "");//家属姓名
+        map1.put("ake005_3", "");//手机
+        Ac01 ac01 = new Ac01();
+        ac01 = ac01Service1.findBy("aac001", Long.valueOf(map.get("AAC001").toString()));
+        JSONObject json = LoginInsiis.returnInsiisPost("6014", Long.valueOf(map.get("AAC001").toString()), "0",
+                "姓名:" + ac01.getAac003() + " 身份证:" + map.get("AAE135").toString() + " 开始时间:" + map.get("STARTDATE").toString(),
+                map1);//向社保系统发起参保请求
+
+        if (json.get("mainMessage").equals("ok")) {
+            json.clear();
+            json.put("AAC003", ac01.getAac003());
+            json.put("AAE135", ac01.getAae135());
+            json.put("mainMessage", "申请成功，等待中心审核!");
+        } else {
+            throw new ServiceException("保存出错！" + json.get("mainMessage").toString());
+        }
+
+
+        return json;
+    }
+
+
+    /**
+     * 参保登记表打印
+     *
+     * @param map AAC001
+     *            FILETYPE 返回的文件类型 pdf image
+     *            PRINTTYPE 打印类型 1 灵活就业（个体）参保 2 城乡医保 3城乡养老
+     * @return
+     */
+    public JSONObject trade6015(Map<String, Object> map) {
+        try {
+            map.get("AAE135").toString();
+            map.get("FILETYPE").toString();
+            map.get("PRINTTYPE").toString();
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
+        String date = sdf.format(new Date());
+        String aae135 = map.get("AAE135").toString();
+        String fileType = map.get("FILETYPE").toString();//返回的文件类型 pdf image
+        String printType = map.get("PRINTTYPE").toString();//打印类型 1 灵活就业（个体）参保 2 城乡医保 3城乡养老
+        if (!fileType.equals("pdf") && !fileType.equals("image")) {
+            throw new ServiceException("FILETYPE 传入有误 请传入 pdf或image");
+        }
+        if (!printType.equals("1") && !printType.equals("2")&& !printType.equals("3")) {
+            throw new ServiceException("PRINTTYPE 传入有误 请传入 1 灵活就业（个体）参保 2 城乡医保 3城乡养老");
+        }
+        String urlstr = "http://10.255.5.100:8399/WebReport/ReportServer?reportlet=/casi/CA00003" + (printType.equals("1") ? "6" : printType.equals("2") ? "5":"4") + ".cpt&aae135="
+                + aae135 + "&format=" + fileType;
+        String saveDir = "d://springBoot_tmp";
+        String fileName = date + "_" + aae135 + "_turnOutPrint" + "." + (fileType.equals("image") ? "png" : "pdf");
+        System.out.printf(aae135 + " " + fileName);
+        FileDownloadTool.download(urlstr, saveDir, fileName);//下载文件到本地
+        DeleteFileDate(saveDir);//删除非今天的文件
+        File file = new File(saveDir + File.separator + fileName);
+        String strBase64 = Base64_Coder.getFileBinary(file);
+        JSONObject json = new JSONObject();
+        json.put("FILEBASE64", strBase64);
+        json.put("FILETYPE", fileType);
+        return json;
+    }
+
+    /**
+     * 灵活就业登记校验
+     *
+     * @param map
+     * @return
+     */
+    public JSONObject trade6016(Map<String, Object> map)  {
+        try {
+            map.get("AAE135").toString();//身份证
+
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        Long aac001 = queryPerson(map.get("AAE135").toString(), null);
+        if(aac001.equals(0L)){
+            throw new ServiceException("社保系统中找不到该人员基本信息");
+        }
+        Map<String, String> mapSql = new HashMap<>();
+        mapSql.put("SQL", "select a.aae140 from ac02 a,ac20 b where a.aaz159=b.aaz159 and a.aae140='20' and aac031='1' and aac008='1' and a.aac001="+aac001);
+        List list = dataSharingMapper.commQuery(mapSql);
+        if(list.size()>0){
+            throw new ServiceException("该人员不符合线上办理的条件！请到窗口办理");
+        }
+        JSONObject json = new JSONObject();
+
+        Ac01 ac01=new Ac01();
+        ac01=ac01Service1.findBy("aac001",aac001);
+        json.clear();
+        json.put("AAC001", aac001);
+        json.put("AAE135", ac01.getAae135());
+        json.put("AAC003", ac01.getAac003());
+
+        return json;
+    }
+    /**
+     * 灵活就业登记
+     *
+     * @param map
+     * @return
+     */
+    public JSONObject trade6017(Map<String, Object> map)  {
+        try {
+            map.get("AAC001");
+            map.get("AAE135");//身份证
+            map.get("AAC009");//户口性质
+            map.get("AAC011");//文化程度
+            map.get("AAE006");//地址
+            map.get("EAC101");//手机
+            map.get("GZDD"  );//工作地点
+            map.get("BDC033");//工作内容
+
+        } catch (Exception e) {
+            throw new ServiceException("传入参数有误！" + JSON.toJSONString(map));
+        }
+        trade6016(map);
+        Cc76 cc76=new Cc76();
+        cc76.setAaz308(publicMapper.querySequenceByParam("sq_aaz308"));
+        cc76.setAac001(Long.valueOf(map.get("AAC001").toString()));
+        cc76.setAae135(map.get("AAE135").toString());
+        cc76.setAac009(map.get("AAC009").toString());
+        cc76.setAac011(map.get("AAC011").toString());
+        cc76.setAae006(map.get("AAE006").toString());
+        cc76.setEac101(map.get("EAC101").toString());
+        cc76.setGzdd( map.get("GZDD"  ).toString());
+        cc76.setBdc033(map.get("BDC033").toString());
+        if(map.get("Projid")!=null&&!map.get("Projid").toString().equals("")){
+            cc76.setProjid(map.get("Projid").toString());
+        }
+        cc76.setFlag("0");
+        cc76.setAae036(publicMapper.queryDBdate());
+        cc76Service.save(cc76);
+        JSONObject json = new JSONObject();
+        json.put("mainMSG","成功");
+        json.put("AAE135",cc76.getAae135());
+
+        return json;
+
+    }
+
     /**
      * 人员基本信息查询(人员搜索框)
      *

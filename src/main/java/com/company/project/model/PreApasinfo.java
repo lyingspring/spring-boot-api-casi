@@ -3,7 +3,7 @@ package com.company.project.model;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "CASI.PRE_APASINFO")
+@Table(name = "PRE_APASINFO")
 public class PreApasinfo {
     @Id
     @Column(name = "PROJID")

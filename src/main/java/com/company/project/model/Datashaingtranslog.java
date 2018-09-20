@@ -3,7 +3,7 @@ package com.company.project.model;
 import java.util.Date;
 import javax.persistence.*;
 
-@Table(name = "CASI.DATASHAINGTRANSLOG")
+@Table(name = "DATASHAINGTRANSLOG")
 public class Datashaingtranslog {
     @Id
     @Column(name = "SNO")

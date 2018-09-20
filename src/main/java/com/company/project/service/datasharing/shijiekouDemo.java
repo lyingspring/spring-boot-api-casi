@@ -44,8 +44,8 @@ public class shijiekouDemo {
         json.put("AAC001","10907226201");
         json.put("FILETYPE","pdf");
         json.put("PRINTTYPE","1");
-        json.put("TradeCode","6002");
-
+        json.put("TradeCode","6016");
+        json.put("AAE135","513029196809066817");
 
         String request=RSAUtils.encryptByPrivateKey(json.toJSONString(), privateKey);
         String sign=RSAUtils.sign(request,privateKey);
@@ -57,10 +57,10 @@ public class shijiekouDemo {
 
 
 
-        //System.out.println(DcryptUtils.verify(request,sign));//验证
-       // System.out.println(DcryptUtils.decryptByPublicKey(request));
-        //System.out.println(post(url,parts));
-        sendxunfei();//讯飞
+        System.out.println(DcryptUtils.verify(request,sign));//验证
+        System.out.println(DcryptUtils.decryptByPublicKey(request));
+        System.out.println(post(url,parts));
+        //sendxunfei();//讯飞
        // System.out.println(DcryptUtils.decryptByPublicKey(request));
     }
 
